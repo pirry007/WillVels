@@ -1,4 +1,9 @@
-* {
-    box-sizing: border-box;
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+header img {
+    height: 30px;
 }
 
