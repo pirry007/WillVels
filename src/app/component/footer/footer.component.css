@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    align-content: space-between;
+}
+  .ubicacion {
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  .footernav {
+    display: flex;
+    align-content: space-between;
+  }
+  footer .iconos {
+    color: white;
+    padding-top: 10px;
+    font-family: DM Serif Display;
+  }
