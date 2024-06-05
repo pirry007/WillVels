@@ -1,0 +1,9 @@
+.products {
+    padding: 15px;
+    border: 1px solid black;
+    background-color: rgb(169, 157, 237);
+    border-radius: 6px;
+}
+.products img {
+    height: 150px;
+}
