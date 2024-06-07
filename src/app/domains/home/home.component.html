@@ -6,10 +6,9 @@
   <h2>Lorem ipsum dolor sit.</h2>
   <section>
     <section class="grid-container">
-      <app-card-product/>
-      <app-card-product/>
-      <app-card-product/>
-      <app-card-product/>
+      @for (product of products(); track product.id){
+      <app-card-product [titulo]="product.name" [description]="product.description" [image]="product.image" [price]="product.price"/>
+      }
     </section>
     <div class="verTodo">
       <button class="buttons">Ver todo</button>

@@ -1,9 +1,17 @@
 .products {
-    padding: 15px;
-    border: 1px solid black;
-    background-color: rgb(169, 157, 237);
+    border: 2px solid rgb(204, 163, 250);
+    background-color: rgb(208, 200, 252);
     border-radius: 6px;
 }
+
 .products img {
-    height: 150px;
+    width: 100%;
+}
+
+.text {
+    padding: 5px;
+}
+
+.text h2,h3,p {
+    margin: 10px 0;
 }
