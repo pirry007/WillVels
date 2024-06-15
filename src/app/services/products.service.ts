@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
+import { Injectable, inject, signal } from '@angular/core';
 import { Product } from '../models/product.model';
 
 @Injectable({
@@ -14,9 +14,8 @@ export class ProductsService {
     return this.http.get('http://localhost:3000/api/products')
   }
 
-  
-  getProductById(id: number){
-    return this.http.get('http://localhost:3000/api/products/:id')
+  getProductById(id: string){
+    return this.http.get('http://localhost:3000/api/products/'+ id)
   }
 
 }

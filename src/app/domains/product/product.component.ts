@@ -20,7 +20,12 @@ export class ProductComponent {
 
   ngOnInit(){
     if (this.id !== undefined) {
-      this.product.set(this.productsService.getProductById(Number(this.id)))
+      this.productsService.getProductById(this.id).subscribe({
+        next: (response)=>{
+          this.product.set(response)
+        }
+      })
+      console.log(this.product())
     }
   }
 }
