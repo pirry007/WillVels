@@ -1,19 +1,17 @@
+<app-header/>
 <main>
     <section class="ficha-producto">
       <div class="product-image">
         <img
-          src="https://mariatini.com/cdn/shop/files/IMG_5556.jpg?v=1707505793&width=823"
-          alt="Vela"
+          [src]="product()?.image"
+          [alt]="product()?.titulo"
         />
       </div>
       <div class="producto-texto">
-        <h1>Nombre producto</h1>
-        <h2>$50.000</h2>
+        <h1>{{product()?.titulo}}</h1>
+        <h2>{{product().price}}</h2>
         <p>
-          Descripcion Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Dolores obcaecati explicabo nam, iure delectus, fugit ad rem nostrum,
-          aspernatur ipsum recusandae. Corporis deleniti facere hic nihil unde a
-          aperiam reprehenderit.
+          {{product()?.description}}
         </p>
         <ul>
           <li>item</li>
@@ -23,4 +21,4 @@
       </div>
     </section>
   </main>
-  
+  <app-footer/>

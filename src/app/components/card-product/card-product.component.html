@@ -1,13 +1,15 @@
 <div class="products">
-    <img
-      [src]="image"
-      [alt]="titulo"
-    />
-    <div class="text">
-      <h2>{{titulo}}</h2>
-      <h3>{{price}}</h3>
-      <p>
-        {{description}}
-      </p>
+      <img
+        [src]="image"
+        [alt]="titulo"
+      />
+      <div class="title-price">
+        <h2>{{titulo}}</h2>
+        <h3>{{price | currency}}</h3>
+      </div>
+        <div class="description">
+          <p>
+            {{description}}
+          </p>
+        </div>
     </div>
-  </div>

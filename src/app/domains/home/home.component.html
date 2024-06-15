@@ -6,12 +6,14 @@
   <h2>Lorem ipsum dolor sit.</h2>
   <section>
     <section class="grid-container">
-      @for (product of products(); track product.id){
+      @for (product of products(); track product._id){
+      <a [routerLink]="['/product', product._id]">
       <app-card-product [titulo]="product.name" [description]="product.description" [image]="product.image" [price]="product.price"/>
+    </a>
       }
     </section>
     <div class="verTodo">
-      <button class="buttons">Ver todo</button>
+      <button class="buttons"><a [routerLink]="['catalogue']">Ver todo</a></button>
     </div>
   </section>
 </main>

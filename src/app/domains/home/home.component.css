@@ -52,3 +52,13 @@ ul {
 li {
     margin-bottom: 10px;
 }
+
+a {
+    text-decoration: none;
+    color:unset;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}

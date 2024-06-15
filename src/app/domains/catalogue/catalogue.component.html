@@ -1,3 +1,4 @@
+<app-header/>
 <main>
   <div class="titulo">
     <h1>Catalogo</h1>
@@ -7,92 +8,8 @@
     </p>
   </div>
   <section class="grid-container">
-    <div class="product-card">
-      <img
-        src="https://velasdelafe.com/wp-content/uploads/2021/07/vela-aromatica-10x10-02.jpg"
-        alt=""
-      />
-      <div>
-        <h2>Producto</h2>
-        <p>$25.000</p>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img
-        src="https://velasdelafe.com/wp-content/uploads/2021/07/vela-aromatica-10x10-02.jpg"
-        alt=""
-      />
-      <div>
-        <h2>Producto</h2>
-        <p>$25.000</p>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img
-        src="https://velasdelafe.com/wp-content/uploads/2021/07/vela-aromatica-10x10-02.jpg"
-        alt=""
-      />
-      <div>
-        <h2>Producto</h2>
-        <p>$25.000</p>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img
-        src="https://velasdelafe.com/wp-content/uploads/2021/07/vela-aromatica-10x10-02.jpg"
-        alt=""
-      />
-      <div>
-        <h2>Producto</h2>
-        <p>$25.000</p>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img
-        src="https://velasdelafe.com/wp-content/uploads/2021/07/vela-aromatica-10x10-02.jpg"
-        alt=""
-      />
-      <div>
-        <h2>Producto</h2>
-        <p>$25.000</p>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img
-        src="https://velasdelafe.com/wp-content/uploads/2021/07/vela-aromatica-10x10-02.jpg"
-        alt=""
-      />
-      <div>
-        <h2>Producto</h2>
-        <p>$25.000</p>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img
-        src="https://velasdelafe.com/wp-content/uploads/2021/07/vela-aromatica-10x10-02.jpg"
-        alt=""
-      />
-      <div>
-        <h2>Producto</h2>
-        <p>$25.000</p>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img
-        src="https://velasdelafe.com/wp-content/uploads/2021/07/vela-aromatica-10x10-02.jpg"
-        alt=""
-      />
-      <div>
-        <h2>Producto</h2>
-        <p>$25.000</p>
-      </div>
-    </div>
+    @for (product of products(); track product.id)
+    {<app-card-product [titulo]="product.name" [description]="product.description" [image]="product.image" [price]="product.price"/>}
   </section>
 </main>
+<app-footer/>

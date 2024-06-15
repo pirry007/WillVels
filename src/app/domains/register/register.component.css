@@ -1,11 +1,4 @@
-.register-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  
+
   .register-card {
     background: #f7f7f7;
     padding: 20px;
@@ -14,6 +7,8 @@
     display: flex;
     flex-direction: column;
     width: 400px;
+    max-width: 1200px;
+    margin: 30px auto;
   }
 
   .register-card p {
@@ -24,10 +19,11 @@
     margin-bottom: 0;
   }
   
-  .form {
-    margin-top: 15px;
-  }
   
+  label {
+    color: rgb(204, 33, 204);
+  }
+
   input {
     display: block;
     width: 100%;
@@ -48,5 +44,25 @@
 
   span {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .login small {
+    margin: 0;
+  }
+
+  .login a {
+    padding: 5px;
+    border-radius: 5px;
+    border-color: rgb(225, 149, 255);
+    background-color: rgb(255, 160, 227);
+    color: white;
+    text-decoration: none;
   }

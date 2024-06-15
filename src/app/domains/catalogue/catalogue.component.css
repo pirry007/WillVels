@@ -27,6 +27,7 @@ section.grid-container{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 div.product-card {
@@ -37,7 +38,7 @@ div.product-card {
 }
 
 div.product-card img {
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
 }
 

@@ -1,27 +1,31 @@
 <header>
-  <img
-    src="#"
-    alt=""
-    class="logo"
-  />
-  <nav>
+  <div class="logo-container">
+    <a [routerLink]="['']">
+      <img
+        src="https://img.freepik.com/vector-gratis/vector-diseno-degradado-colorido-pajaro_343694-2506.jpg?size=338&ext=jpg&ga=GA1.1.672697106.1718323200&semt=ais_user"
+        alt=""
+        id="logo"
+      />
+    </a>
+  </div>
+  <nav class="nav-items">
     <ul>
-      <li>Lorem, ipsum.</li>
-      <li>Lorem, ipsum.</li>
-      <li>Lorem, ipsum.</li>
+      <li><a [routerLink]="['/catalogue']">Catalogue</a></li>
+      <li><a [routerLink]="">About Us</a></li>
+      <li><a [routerLink]="">Visit Us</a></li>
     </ul>
   </nav>
-  <div>
-    <a href="">
+  <div class="header-icons">
+    <a [routerLink]="['/login']">
       <img
-        src="#"
+        src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
         alt=""
         class="userButtons"
       />
     </a>
     <a href="">
       <img
-        src="#"
+        src="assets/images/shopping-cart.png"
         alt=""
         class="userButtons"
       />

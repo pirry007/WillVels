@@ -4,21 +4,44 @@ li{
 
 header {
     display: flex;
-    align-content: space-between;
-    background-color: #C2C27B;
+    align-content: center;
+    justify-content: space-between;
+    background-color: #eedcff;
 }
 
-header nav ul{
-    text-decoration: none;
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
 }
 
-.logo {
-    height: 50px;
+nav li {
+    text-decoration: underline;
+}
+
+nav a {
+    color: black;
+}
+
+.logo-container {
+    height: 60px;
+}
+
+#logo {
+    height: 100%;
     width: auto;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .userButtons {
     height: 50px;
     width: auto;
+    object-fit: cover;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    height: 100%;
 }
