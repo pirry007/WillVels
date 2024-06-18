@@ -20,11 +20,11 @@ section.grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    gap: 10px;
+    gap: 20px;
     margin-bottom: 20px;
 }
 
-.buttons {
+.ver-todo-button{
     text-align: center;
     border: none;
     background-color: rgb(167, 73, 255);
@@ -32,6 +32,12 @@ section.grid-container{
     border-radius: 6px;
     padding: 10px 20px;
     width: fit-content;
+    transition: all 0.5s;
+}
+
+.ver-todo-button:hover {
+    transform: scale(1.03);
+    box-shadow:  6px 6px 6px 1px rgba(26, 25, 26, 0.185);;
 }
 
 .verTodo {
@@ -61,4 +67,23 @@ a {
 button a {
     text-decoration: none;
     color: white;
+}
+
+@media (max-width: 1023px){
+    section.grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px){
+    section.grid-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767px){
+    section.grid-container{
+        grid-template-columns: 1fr;
+    }
 }

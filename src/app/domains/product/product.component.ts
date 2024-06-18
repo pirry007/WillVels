@@ -3,11 +3,12 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { ProductsService } from '../../services/products.service';
 import { Product } from '../../models/product.model';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent],
+  imports: [HeaderComponent, FooterComponent, CurrencyPipe],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
 })

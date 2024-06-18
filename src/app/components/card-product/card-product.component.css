@@ -6,10 +6,18 @@
     display: flex;
     flex-direction: column;
     align-content: center;
+    margin: 0 auto;
+    transition: all 0.5s;
+}
+
+.products:hover {
+    transform: scale(1.03);
+    box-shadow:  6px 5px 10px 1px rgba(26, 25, 26, 0.185);;
 }
 
 .products img {
     width: 100%;
+    object-fit: cover;
 }
 
 h2,h3 {
@@ -43,4 +51,28 @@ button {
     border-radius: 6px;
     padding: 10px 20px;
     width: fit-content;
+}
+
+@media (max-width: 1023px){
+   
+}
+
+@media (max-width: 768px){
+   .products {
+    height: auto;
+   }
+}
+
+@media (max-width: 767px){
+   .image-container {
+    width: 100%;
+   }
+   .image-container img {
+    width: 100%;
+   }
+   .products {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+   }
 }

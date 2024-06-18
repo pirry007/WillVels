@@ -45,3 +45,16 @@ nav a {
     gap: 20px;
     height: 100%;
 }
+
+
+@media (max-width: 1023px){
+   
+}
+
+@media (max-width: 768px){
+  
+}
+
+@media (max-width: 767px){
+   
+}

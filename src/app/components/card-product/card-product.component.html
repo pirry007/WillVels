@@ -1,8 +1,10 @@
 <div class="products">
-      <img
-        [src]="image"
-        [alt]="titulo"
-      />
+      <div class="image-container">
+        <img
+          [src]="image"
+          [alt]="titulo"
+        />
+      </div>
       <div class="title-price">
         <h2>{{titulo}}</h2>
         <h3>{{price | currency}}</h3>

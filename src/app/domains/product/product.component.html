@@ -1,17 +1,15 @@
-<app-header/>
+<app-header />
 <main>
-    <section class="ficha-producto">
-      <div class="product-image">
-        <img
-          [src]="product()?.image"
-          [alt]="product()?.titulo"
-        />
-      </div>
-      <div class="producto-texto">
-        <h1>{{product()?.titulo}}</h1>
-        <h2>{{product().price}}</h2>
+  <section class="ficha-producto">
+    <div class="product-image">
+      <img [src]="product()?.image" [alt]="product()?.titulo" />
+    </div>
+    <div class="text-container">
+      <div class="detail">
+        <h1>{{ product()?.titulo }}</h1>
+        <h2>{{ product().price | currency }}</h2>
         <p>
-          {{product()?.description}}
+          {{ product()?.description }}
         </p>
         <ul>
           <li>item</li>
@@ -19,6 +17,11 @@
           <li>item</li>
         </ul>
       </div>
-    </section>
-  </main>
-  <app-footer/>
+      <div class="car-button">
+        <button>Add to the cart and checkout</button>
+        <button>Add to the car</button>
+      </div>
+    </div>
+  </section>
+</main>
+<app-footer />
