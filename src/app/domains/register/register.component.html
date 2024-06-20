@@ -1,43 +1,44 @@
-<app-header/>
+<app-header />
 <div class="register-container">
   <div class="register-card">
     <div class="text">
       <h1>Registrarse</h1>
       <p>
-        Para poder acceder a las funcionalidades de nuestra app,
-        debes crearte una cuenta, registrate por medio de este formulario
+        Para poder acceder a las funcionalidades de nuestra app, debes crearte
+        una cuenta, registrate por medio de este formulario
       </p>
     </div>
     <div class="form">
-      <form action="">
+      <form [formGroup]="registerForm" (submit)="onSubmit($event)">
         <div class="name-input">
-          <label for="name">Nombre De Usuario</label>
-          <input type="text" id="name" />
+          <label for="firstname">Nombre De Usuario</label>
+          <input type="text" id="firstname" formControlName="firstname" />
         </div>
         <div class="lastname-input">
           <label for="lastname">Apellido De Usuario</label>
-          <input type="text" id="lastname" />
+          <input type="text" id="lastname" formControlName="lastname" />
         </div>
         <div class="email-input">
           <label for="email">Email De Usuario</label>
-          <input type="text" id="email" />
+          <input type="text" id="email" formControlName="email" />
         </div>
-        <div>
+        <!-- <div>
           <label for="create-password">Crear Contraseña del usuario</label>
-          <input type="create-password" id="create-password" />
-        </div>
+          <input type="password" id="create-password" />
+        </div> -->
         <div class="confirmPassword-input">
-          <label for="confirmPassword">Confirmar Contraseña</label>
-          <input type="password" id="confirmPassword" />
+          <label for="password">Confirmar Contraseña</label>
+          <input type="password" id="password" formControlName="password" />
         </div>
+        <span>
+          <div class="login">
+            <small>ya estas registrado?</small>
+            <a [routerLink]="['/login']">Login</a>
+          </div>
+          <button type="submit">Enviar</button>
+        </span>
       </form>
-      <span>
-        <div class="login">
-          <small>ya estas registrado?</small>
-          <a [routerLink]="['/login']">Login</a>
-        </div>
-        <button type="submit">Enviar</button>
-    </span>
+    </div>
   </div>
+  <app-footer />
 </div>
-<app-footer/>

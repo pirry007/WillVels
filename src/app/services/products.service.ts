@@ -10,12 +10,11 @@ export class ProductsService {
 
   constructor() {}
 
-  getProducts(){
-    return this.http.get('http://localhost:3000/api/products')
+  getProducts() {
+    return this.http.get('http://localhost:3000/api/products');
   }
 
-  getProductById(id: string){
-    return this.http.get('http://localhost:3000/api/products/'+ id)
+  getProductById(id: string) {
+    return this.http.get('http://localhost:3000/api/products/' + id);
   }
-
 }
