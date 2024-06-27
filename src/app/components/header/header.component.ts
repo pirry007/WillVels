@@ -1,9 +1,10 @@
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
 import { Router, RouterLinkWithHref } from '@angular/router';
-import { CartService } from '../../services/cart.service.ts.service';
-import { UserService } from '../../services/user.service.ts.service';
-import { AuthService } from '../../services/auth.service.ts.service';
+import { CartService } from '../../services/cart.service';
+import { UserService } from '../../services/user.service';
+import { AuthService } from '../../services/auth.service';
+
 
 @Component({
   selector: 'app-header',
@@ -28,7 +29,7 @@ private router = inject(Router)
   }
 
   isLogged(){
-    return this.userService.islogged();
+    return this.userService.isLogged();
   }
 
   logout(){

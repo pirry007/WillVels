@@ -38,7 +38,7 @@ export class LoginComponent {
     }),
   });
 
-  OnSubmit(event: Event) {
+  OnSubmit() {
     if (this.loginForm.valid) {
       this.userService.login(this.loginForm.value as User).subscribe({
         next: (response: any) => {

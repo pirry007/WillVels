@@ -5,7 +5,7 @@
       <h1>Login</h1>
       <p>Accede a tu cuenta</p>
       <div class="form">
-        <form [formGroup]="loginForm" (submit)="OnSubmit($event)">
+        <form [formGroup]="loginForm" (submit)="OnSubmit()">
           <div class="email-input">
             <label for="email">Email De Usuario</label>
             <input type="text" id="email" formControlName="email" />

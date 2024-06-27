@@ -11,8 +11,8 @@
   <nav class="nav-items">
     <ul>
       <li><a [routerLink]="['/catalogue']">Catalogue</a></li>
-      <li><a [routerLink]="">About Us</a></li>
-      <li><a [routerLink]="">Visit Us</a></li>
+      <li><a [routerLink]="['']">About Us</a></li>
+      <li><a (click)="logout()" [routerLink]="['']">Cerrar sesion</a></li>
     </ul>
   </nav>
   <div class="header-icons">
@@ -23,9 +23,9 @@
         class="userButtons"
       />
     </a>
-    <button (click)="toggleShowCart()">
+    <div (click)="toggleShowCart()">
       <img src="assets/images/shopping-cart.png" alt="" class="userButtons" />
-    </button>
+    </div>
   </div>
 </header>
 <aside [ngClass]="showCart() ? 'cart show' : 'cart'">
