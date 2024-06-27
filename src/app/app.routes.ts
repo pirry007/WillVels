@@ -4,11 +4,12 @@ import { HomeComponent } from './domains/home/home.component';
 import { ProductComponent } from './domains/product/product.component';
 import { LoginComponent } from './domains/login/login.component';
 import { RegisterComponent } from './domains/register/register.component';
+import { redirectIfLogged } from './guards/redirectLogged.guard';
 
 export const routes: Routes = [
-    {path: "catalogue", component: CatalogueComponent},
-    {path: "", component: HomeComponent},
-    {path: "product/:id", component: ProductComponent},
-    {path: "login", component: LoginComponent},
-    {path: "register", component: RegisterComponent}
+  { path: 'catalogue', component: CatalogueComponent },
+  { path: '', component: HomeComponent },
+  { path: 'product/:id', component: ProductComponent },
+  { path: 'login', component: LoginComponent, canActivate:[redirectIfLogged] },
+  { path: 'register', component: RegisterComponent, canActivate: [redirectIfLogged]},
 ];

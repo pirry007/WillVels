@@ -17,6 +17,7 @@ section.ficha-producto{
 div.product-image {
     margin: 0 20px;
     width: 60%;
+    display: flex;
 }
 
 img {

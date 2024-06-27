@@ -10,6 +10,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { User } from '../../models/user.model';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -24,8 +25,9 @@ import { User } from '../../models/user.model';
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
-  private userService = inject(UserService);
   private router = inject(Router);
+  private userService = inject(UserService);
+  private authService = inject(AuthService)
 
   loginForm = new FormGroup({
     email: new FormControl('', {
@@ -39,7 +41,8 @@ export class LoginComponent {
   OnSubmit(event: Event) {
     if (this.loginForm.valid) {
       this.userService.login(this.loginForm.value as User).subscribe({
-        next: (response) => {
+        next: (response: any) => {
+          this.authService.setToken(response.token)
           this.router.navigate(['']);
         },
         error: (error) => {

@@ -25,4 +25,12 @@ export class UserService {
       password: formValues.password,
     });
   }
+
+  isLogged(){
+    if(localStorage.getItem("user_token")){
+      return true
+    } else {
+      return false
+    }
+  }
 }
