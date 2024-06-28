@@ -27,7 +27,7 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent {
   private router = inject(Router);
   private userService = inject(UserService);
-  private authService = inject(AuthService)
+  private authService = inject(AuthService);
 
   loginForm = new FormGroup({
     email: new FormControl('', {
@@ -42,15 +42,19 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       this.userService.login(this.loginForm.value as User).subscribe({
         next: (response: any) => {
-          this.authService.setToken(response.token)
-          this.router.navigate(['']);
+          if (response.token) {
+            this.authService.setToken(response.token);
+            this.router.navigate(['']);
+          } else {
+            alert('credenciales invalidas')
+          }
         },
         error: (error) => {
           console.log(error);
         },
       });
     } else {
-      alert('invalid crack');
+      alert('Campos incompletos');
     }
   }
 }

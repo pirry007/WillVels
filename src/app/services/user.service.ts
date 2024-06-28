@@ -19,7 +19,7 @@ export class UserService {
     });
   }
 
-  login(formValues: User) {
+  login(formValues: any) {
     return this.http.post('http://localhost:3000/api/auth/login', {
       email: formValues.email,
       password: formValues.password,
