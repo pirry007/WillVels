@@ -16,16 +16,8 @@
         [description]="product.description"
         [image]="product.image"
         [price]="product.size[0].price"
-      /> </a
-    >} @for (product of products(); track product.id) {
-    <div [routerLink]="['/product', product._id]">
-      <app-card-product
-        [titulo]="product.name"
-        [description]="product.description"
-        [image]="product.image"
-        [price]="product.price"
       />
-    </div>
+    </a>
     <button class="add-cart" (click)="addToCart(product)">
       Agregar al Carrito
     </button>
