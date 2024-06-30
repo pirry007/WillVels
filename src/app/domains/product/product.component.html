@@ -6,15 +6,16 @@
     </div>
     <div class="text-container">
       <div class="detail">
-        <h1>{{ product()?.titulo }}</h1>
-        <h2>{{ product().price | currency }}</h2>
+        <h1>{{ product()?.name }}</h1>
+        <h2>{{ product()?.size[0].price | currency:'COP':'symbol':'1.0-0' }}</h2>
         <p>
           {{ product()?.description }}
         </p>
         <ul>
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
+          <p>aromas disponibles</p>
+          <li>{{product()?.scent[0]}}</li>
+          <li>{{product()?.scent[1]}}</li>
+          <li>{{product()?.scent[2]}}</li>
         </ul>
       </div>
       <div class="car-button">

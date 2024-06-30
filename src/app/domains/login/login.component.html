@@ -1,6 +1,9 @@
 <app-header />
 <main>
   <div class="login-container">
+    @if(formInvalid){
+      <h3>Credenciales invalidas</h3>
+  }
     <div class="login-card">
       <h1>Login</h1>
       <p>Accede a tu cuenta</p>
@@ -9,11 +12,17 @@
           <div class="email-input">
             <label for="email">Email De Usuario</label>
             <input type="text" id="email" formControlName="email" />
+            @if (email?.invalid && email?.hasError('required') && email?.touched) {
+              <small class="small-input">Campo requerido</small>
+            }
           </div>
-          <div>
+          <div class="password-input">
             <label for="password">Contraseña</label>
             <input type="password" id="password" formControlName="password" />
           </div>
+          @if (password?.invalid && password?.hasError('required') && password?.touched) {
+            <small class="small-input">Campo requerido</small>
+          }
           <span>
             <div class="register">
               <small>No estas registrado?</small>

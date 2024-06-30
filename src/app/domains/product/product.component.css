@@ -29,7 +29,7 @@ img {
 div.text-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .car-button {
@@ -43,7 +43,7 @@ button{
     border-radius: 5px;
     border-color: rgb(225, 149, 255);
     height: 50px;
-    width: 50%;
+    width: 70%;
     background-color: rgb(255, 160, 227);
     color: white;
   }

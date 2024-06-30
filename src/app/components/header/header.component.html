@@ -16,24 +16,24 @@
     </ul>
   </nav>
   <div class="header-icons">
-    <a [routerLink]="['/login']">
+    @if(!isLogged()){<a [routerLink]="['/login']">
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
         alt=""
         class="userButtons"
       />
-    </a>
+    </a>} @else {}
     <div (click)="toggleShowCart()">
       <img src="assets/images/shopping-cart.png" alt="" class="userButtons" />
     </div>
   </div>
+  <aside [ngClass]="showCart() ? 'cart show' : 'cart'">
+    <h2>Carrito</h2>
+    <button class="close" (click)="toggleShowCart()">Close</button>
+    <section></section>
+    <div>
+      <h3>Total</h3>
+      <a href="">Checkout</a>
+    </div>
+  </aside>
 </header>
-<aside [ngClass]="showCart() ? 'cart show' : 'cart'">
-  <h2>Carrito</h2>
-  <button class="close" (click)="toggleShowCart()">Close</button>
-  <section></section>
-  <div>
-    <h3>Total</h3>
-    <a href="">Checkout</a>
-  </div>
-</aside>
