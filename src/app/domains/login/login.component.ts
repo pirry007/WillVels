@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Router, RouterLinkWithHref } from '@angular/router';
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
@@ -38,6 +38,15 @@ export class LoginComponent {
     }),
   });
 
+  get email() {
+    return this.loginForm.get('email');
+  }
+  get password() {
+    return this.loginForm.get('password');
+  }
+
+  formInvalid = false
+
   OnSubmit() {
     if (this.loginForm.valid) {
       this.userService.login(this.loginForm.value as User).subscribe({
@@ -46,7 +55,7 @@ export class LoginComponent {
             this.authService.setToken(response.token);
             this.router.navigate(['']);
           } else {
-            alert('credenciales invalidas')
+            this.formInvalid = true
           }
         },
         error: (error) => {

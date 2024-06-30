@@ -30,6 +30,9 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+  }
+
+  .input-container {
     margin-bottom: 20px;
   }
 
@@ -46,6 +49,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .small-input {
+    color: red;
   }
 
   .login {

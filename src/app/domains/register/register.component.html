@@ -10,32 +10,95 @@
     </div>
     <div class="form">
       <form [formGroup]="registerForm" (submit)="onSubmit($event)">
-        <div class="name-input">
+        <div class="input-container">
           <label for="firstname">Nombre</label>
           <input type="text" id="firstname" formControlName="firstname" />
+          @if (firstname?.invalid && firstname?.hasError('required') &&
+          firstname?.touched) {
+          <small class="small-input">Campo requerido</small>
+          }
         </div>
-        <div class="lastname-input">
+        <div class="input-container">
           <label for="lastname">Apellido</label>
           <input type="text" id="lastname" formControlName="lastname" />
+          @if (lastname?.invalid && lastname?.hasError('required') &&
+          lastname?.touched) {
+          <small class="small-input">Campo requerido</small>
+          }
         </div>
-        <div class="email-input">
+        <div class="input-container">
           <label for="email">Email</label>
           <input type="text" id="email" formControlName="email" />
+          @if (email?.invalid && email?.hasError('required') && email?.touched)
+          {
+          <small class="small-input">Campo requerido</small>
+          } @if (email?.hasError('email')) {
+          <small class="small-input">No se puede verificar el email</small>
+          }
         </div>
         <!-- <div>
           <label for="create-password">Crear Contraseña del usuario</label>
           <input type="password" id="create-password" />
         </div> -->
-        <div class="confirmPassword-input">
-          <label for="password">Confirmar Contraseña</label>
+        <div class="input-container">
+          <label for="password">Crear Contraseña</label>
           <input type="password" id="password" formControlName="password" />
+          @if (password?.invalid && password?.hasError('required') &&
+          password?.touched) {
+          <small class="small-input">Campo requerido</small>
+          } @if (password?.hasError('minlength')){
+          <small class="small-input">Minimo 5 caracteres</small>
+          }
         </div>
         <span>
           <div class="login">
             <small>ya estas registrado?</small>
             <a [routerLink]="['/login']">Login</a>
           </div>
-          <button type="submit">Enviar</button>
+          <button
+            type="submit"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Listo
+          </button>
+
+          @if (registerForm.valid) {
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Registrado con exito!!
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">Gracias por registrarte. Ahora ya puedes iniciar sesion sin ningun problema!</div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          }
         </span>
       </form>
     </div>

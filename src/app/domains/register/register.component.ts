@@ -35,12 +35,25 @@ export class RegisterComponent {
       validators: [Validators.required],
     }),
     email: new FormControl('', {
-      validators: [Validators.required],
+      validators: [Validators.required, Validators.email],
     }),
     password: new FormControl('', {
       validators: [Validators.required, Validators.minLength(5)],
     }),
   });
+
+  get firstname(){
+    return this.registerForm.get('firstname')
+  }
+  get lastname(){
+    return this.registerForm.get('lastname')
+  }
+  get email(){
+    return this.registerForm.get('email')
+  }
+  get password(){
+    return this.registerForm.get('password')
+  }
 
   onSubmit(event: Event) {
     if (this.registerForm.valid) {
@@ -54,7 +67,7 @@ export class RegisterComponent {
         },
       });
     } else {
-      alert('invalido crack');
+      alert('Campos incompletos');
     }
   }
 }

@@ -1,14 +1,41 @@
 <app-header/>
 <main>
-  <div id="portada">
-    <h1>Lorem ipsum dolor sit.</h1>
+
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://img.freepik.com/fotos-premium/velas-aromaticas-decorativas-color-morado-azul-perfumadas-radiance_1135748-17522.jpg" class="d-block w-100 carousel-img" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://img.freepik.com/fotos-premium/velas-aromaticas-decorativas-ambiente-relajante_535844-6110.jpg" class="d-block w-100 carousel-img" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://content.revistainteriores.es/medio/2023/12/12/velas-aromaticas-artesanales_12a5b249_231212162955_1280x794.jpg" class="d-block w-100 carousel-img" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <h2>Lorem ipsum dolor sit.</h2>
+
+  
+  <h4>Productos disponibles</h4>
   <section>
     <section class="grid-container">
       @for (product of products(); track product._id){
       <a [routerLink]="['/product', product._id]">
-      <app-card-product [titulo]="product.name" [description]="product.description" [image]="product.image" [price]="product.price"/>
+      <app-card-product [titulo]="product.name" [description]="product.description" [image]="product.image" [price]="product.size[0].price"/>
     </a>
       }
     </section>

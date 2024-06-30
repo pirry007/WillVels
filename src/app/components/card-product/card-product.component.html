@@ -4,14 +4,11 @@
   </div>
   <div class="title-price">
     <h2>{{ titulo }}</h2>
-    <h3>{{ price | currency }}</h3>
+    <h3>{{ price | currency : "COP" : "symbol" : "1.0-0" }}</h3>
   </div>
   <div class="description">
     <p>
       {{ description }}
     </p>
   </div>
-  <button class="add-cart" (click)="addToCart(product)">
-    Agregar al Carrito
-  </button>
 </div>

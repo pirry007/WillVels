@@ -8,7 +8,16 @@
     </p>
   </div>
   <section class="grid-container">
-    @for (product of products(); track product.id) {
+    @for (product of products(); track product.id) {<a
+      [routerLink]="['/product', product._id]"
+    >
+      <app-card-product
+        [titulo]="product.name"
+        [description]="product.description"
+        [image]="product.image"
+        [price]="product.size[0].price"
+      /> </a
+    >} @for (product of products(); track product.id) {
     <div [routerLink]="['/product', product._id]">
       <app-card-product
         [titulo]="product.name"

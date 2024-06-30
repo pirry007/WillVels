@@ -2,7 +2,7 @@
     border: 2px solid rgb(204, 163, 250);
     background-color: rgb(208, 200, 252);
     border-radius: 6px;
-    height: 350px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -15,8 +15,15 @@
     box-shadow:  6px 5px 10px 1px rgba(26, 25, 26, 0.185);;
 }
 
+.image-container {
+    height: 300px;
+    max-height: 400px;
+}
+
 .products img {
+    height: 100%;
     width: 100%;
+    max-width: 100%;
     object-fit: cover;
     max-height: 200px;
 }
@@ -25,12 +32,22 @@ h2,h3 {
     margin: 0;
 }
 
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: large;
+    margin: 5px;
+}
+
 .title-price {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 0 10px;
+    gap: 5px;
 }
 
 .description {
