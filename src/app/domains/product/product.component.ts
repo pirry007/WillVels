@@ -4,6 +4,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { ProductsService } from '../../services/products.service';
 import { Product } from '../../models/product.model';
 import { CurrencyPipe } from '@angular/common';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -13,6 +14,7 @@ import { CurrencyPipe } from '@angular/common';
   styleUrl: './product.component.css',
 })
 export class ProductComponent {
+  private cartService = inject(CartService)
   @Input() id?: string;
 
   private productsService = inject(ProductsService)
@@ -29,4 +31,9 @@ export class ProductComponent {
       console.log(this.product())
     }
   }
+
+  addToCart(product: any){
+    this.cartService.addToCart(product);
+  }
 }
+

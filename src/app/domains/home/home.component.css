@@ -5,6 +5,7 @@ h1, h2, p, button{
 main {
     margin: 0 auto;
     max-width: 1200px;
+    background-color: #fcf4f0;
 }
 
 #portada {

@@ -5,6 +5,7 @@ h1,h2,p,li {
 main {
     max-width: 1000px;
     margin: 50px auto;
+    background-color: #fcf4f0;
 }
 
 section.ficha-producto{

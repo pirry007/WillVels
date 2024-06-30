@@ -1,4 +1,4 @@
-<app-header/>
+<app-header />
 <main>
   <div class="titulo">
     <h1>Catalogo</h1>
@@ -8,10 +8,19 @@
     </p>
   </div>
   <section class="grid-container">
-    @for (product of products(); track product.id)
-    {<a [routerLink]="['/product', product._id]">
-      <app-card-product [titulo]="product.name" [description]="product.description" [image]="product.image" [price]="product.price"/>
-    </a>}
+    @for (product of products(); track product.id) {
+    <div [routerLink]="['/product', product._id]">
+      <app-card-product
+        [titulo]="product.name"
+        [description]="product.description"
+        [image]="product.image"
+        [price]="product.price"
+      />
+    </div>
+    <button class="add-cart" (click)="addToCart(product)">
+      Agregar al Carrito
+    </button>
+    }
   </section>
 </main>
-<app-footer/>
+<app-footer />

@@ -6,7 +6,7 @@ header {
     display: flex;
     align-content: center;
     justify-content: space-between;
-    background-color: #eedcff;
+    background-color: #c6cebe;
 }
 
 nav ul{
@@ -32,6 +32,7 @@ nav a {
     width: auto;
     border-radius: 5px;
     object-fit: cover;
+    padding-left: 10px;
 }
 
 .userButtons {
@@ -45,6 +46,8 @@ nav a {
     display: flex;
     gap: 20px;
     height: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
 
@@ -74,11 +77,11 @@ aside .close{
     top: 23px;
     right: 20px;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     background: none;
     cursor: pointer;
     padding: 5px;
-    background-color: rgb(143, 198, 243);
+    background-color: #d8abb7;
 }
 
 @media (max-width: 1023px){

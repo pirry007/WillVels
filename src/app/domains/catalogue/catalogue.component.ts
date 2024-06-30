@@ -4,6 +4,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { ProductsService } from '../../services/products.service';
 import { CardProductComponent } from '../../components/card-product/card-product.component';
 import { RouterLinkWithHref } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-catalogue',
@@ -14,6 +15,7 @@ import { RouterLinkWithHref } from '@angular/router';
 })
 export class CatalogueComponent {
   private productsService = inject(ProductsService)
+  private cartService = inject (CartService)
 
   products = signal<any>([])
 
@@ -23,5 +25,9 @@ export class CatalogueComponent {
         this.products.set(response)
       }
     })
+  }
+
+  addToCart(product: any){
+    this.cartService.addToCart(product)
   }
 }

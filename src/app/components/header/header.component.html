@@ -1,11 +1,7 @@
 <header>
   <div class="logo-container">
     <a [routerLink]="['']">
-      <img
-        src="https://img.freepik.com/vector-gratis/vector-diseno-degradado-colorido-pajaro_343694-2506.jpg?size=338&ext=jpg&ga=GA1.1.672697106.1718323200&semt=ais_user"
-        alt=""
-        id="logo"
-      />
+      <img src="../../../assets/images/LogoVels.png" alt="" id="logo" />
     </a>
   </div>
   <nav class="nav-items">
@@ -31,9 +27,13 @@
 <aside [ngClass]="showCart() ? 'cart show' : 'cart'">
   <h2>Carrito</h2>
   <button class="close" (click)="toggleShowCart()">Close</button>
-  <section></section>
+  <section>
+    @for(product of cart().values(); track product._id) {
+    <app-cart-products [product]="product" />
+    }
+  </section>
   <div>
     <h3>Total</h3>
-    <a href="">Checkout</a>
+    <a routerLink="/checkout" class="checkout">Checkout</a>
   </div>
 </aside>

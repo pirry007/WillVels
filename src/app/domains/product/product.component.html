@@ -2,7 +2,7 @@
 <main>
   <section class="ficha-producto">
     <div class="product-image">
-      <img [src]="'http://localhost:3000/uploads/'+ product().image" />
+      <img [src]="'http://localhost:3000/uploads/' + product().image" />
     </div>
     <div class="text-container">
       <div class="detail">
@@ -19,7 +19,9 @@
       </div>
       <div class="car-button">
         <button>Add to the cart and checkout</button>
-        <button>Add to the car</button>
+        <button class="add-cart" (click)="addToCart(product)">
+          Add to the cart
+        </button>
       </div>
     </div>
   </section>

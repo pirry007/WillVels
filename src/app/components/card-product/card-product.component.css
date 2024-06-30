@@ -18,6 +18,7 @@
 .products img {
     width: 100%;
     object-fit: cover;
+    max-height: 200px;
 }
 
 h2,h3 {

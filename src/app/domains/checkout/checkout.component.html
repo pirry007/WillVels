@@ -1,0 +1,37 @@
+<app-header />
+<main>
+  <section class="cart">
+    <h2>Productos en el carrito</h2>
+    @for(product of products().values(); track product._id){
+    <app-cart-products [product]="product" />
+    }
+  </section>
+  <section class="payment">
+    <div>
+      <h2>Detalles de pago</h2>
+      <form action="" (submit)="OnSubmit()" [formGroup]="paymentDetails">
+        <div class="formGroup">
+          <label for="direccion">Dirección de envío</label>
+          <input type="text" name="direccion" id="direccion" />
+        </div>
+        <div class="formGroup">
+          <label for="ciudad">Ciudad de Residencia</label>
+          <input type="text" name="ciudad" id="ciudad" />
+        </div>
+        <div class="formGroup">
+          <label for="departamento">Departamento</label>
+          <input type="text" name="departamento" id="departamento" />
+        </div>
+        <div class="formGroup">
+          <label for="paymentMethod">Método de pago</label>
+          <select name="" id="">
+            <option value="debit-card">Tarjéta débito</option>
+            <option value="transfer">Transferencia Bancaria</option>
+            <option value="nequi">nequi</option>
+          </select>
+        </div>
+        <button type="submit">Realizar pedido</button>
+      </form>
+    </div>
+  </section>
+</main>
