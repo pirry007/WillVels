@@ -7,22 +7,26 @@
     <div class="text-container">
       <div class="detail">
         <h1>{{ product()?.name }}</h1>
-        <h2>{{ product()?.size[0].price | currency:'COP':'symbol':'1.0-0' }}</h2>
+        <h2>
+          {{ product()?.size[0].price | currency : "COP" : "symbol" : "1.0-0" }}
+        </h2>
         <p>
           {{ product()?.description }}
         </p>
         <ul>
           <p>aromas disponibles</p>
-          <li>{{product()?.scent[0]}}</li>
-          <li>{{product()?.scent[1]}}</li>
-          <li>{{product()?.scent[2]}}</li>
+          <li>{{ product()?.scent[0] }}</li>
+          <li>{{ product()?.scent[1] }}</li>
+          <li>{{ product()?.scent[2] }}</li>
         </ul>
-      </div>
-      <div class="car-button">
-        <button>Add to the cart and checkout</button>
-        <button class="add-cart" (click)="addToCart(product)">
-          Add to the cart
-        </button>
+        <div class="car-button">
+          <button class="add-cart" (click)="addToCart(product)">
+            Add to the cart and checkout
+          </button>
+          <button class="add-cart" (click)="addToCart(product)">
+            Add to the cart
+          </button>
+        </div>
       </div>
     </div>
   </section>

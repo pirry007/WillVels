@@ -95,6 +95,13 @@ aside.cart {
     transition: transform 0.4s ease-in-out;
     box-shadow:  -5px 1px 18px 0px rgba(0,0,0,0.75);
     z-index: 2000;
+    align-items: space-between;
+}
+
+section.cart-products{
+    display: flex;
+    flex-direction: colum;
+    flex-grow: 1;
 }
 
 aside.cart.show{

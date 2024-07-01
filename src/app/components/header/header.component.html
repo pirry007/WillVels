@@ -45,15 +45,19 @@
     </nav>
   </header>
 <aside [ngClass]="showCart() ? 'cart show' : 'cart'">
-  <h2>Carrito</h2>
-  <button class="close" (click)="toggleShowCart()">Close</button>
-  <section>
-    @for(product of cart().values(); track product._id) {
-    <app-cart-products [product]="product" />
-    }
-  </section>
   <div>
-    <h3>Total</h3>
+    <h2>Carrito</h2>
+    <button class="close" (click)="toggleShowCart()">Close</button>
+    <section>
+      @for(product of cart().values(); track product._id) {
+      <app-cart-products [product]="product" />
+      }
+    </section>
+  </div>
+  <div>
+    <h3>
+      Total <span>{{ total() | currency }}</span>
+    </h3>
     <a routerLink="/checkout" class="checkout">Checkout</a>
   </div>
 </aside>

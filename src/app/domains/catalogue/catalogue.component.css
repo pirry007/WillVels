@@ -36,6 +36,10 @@ a {
     color: unset;
 }
 
+button.add-cart {
+    height: auto;
+}
+
 
 @media (max-width: 1023px){
     section.grid-container{

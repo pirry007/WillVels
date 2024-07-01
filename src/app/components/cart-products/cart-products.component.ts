@@ -13,7 +13,6 @@ import { CurrencyPipe } from '@angular/common';
 })
 export class CartProductsComponent {
  private cartService = inject(CartService);
- 
   @Input() product: any
 
   productQuantity = new FormControl(0);

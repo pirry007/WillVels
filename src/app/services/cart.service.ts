@@ -10,10 +10,10 @@ export class CartService {
   products = signal(new Map());
 
   total = computed(() => {
-    const productosMap = this.products();
+    const productsMap = this.products();
     let total = 0;
 
-    productosMap.forEach(product => {
+    productsMap.forEach(product => {
       total += product.price * product.quantity;
     });
 
@@ -25,15 +25,15 @@ export class CartService {
   constructor() { }
 
   addToCart(product: Product) {
-    this.products.update(productosMap => {
-      const productInCart = productosMap.get(product._id);
+    this.products.update(productsMap => {
+      const productInCart = productsMap.get(product._id);
       if(productInCart){
-        productosMap.set(product._id, { ...productInCart, quantity: productInCart.quantity + 1 });
+        productsMap.set(product._id, { ...productInCart, quantity: productInCart.quantity + 1 });
       }
       else {
-        productosMap.set(product._id, { ...product, quantity: 1});
+        productsMap.set(product._id, { ...product, quantity: 1});
       }
-      return new Map(productosMap);
+      return new Map(productsMap);
     });
   }
 
@@ -78,11 +78,13 @@ export class CartService {
     });
 
     return this.http.post(
-      "http:localhost:3000/api/orders",
+      "http://localhost:3000/api/orders",
       {
         products: productsArray,
         total: this.total(),
         adress: formData.address,
+        ciudad: formData.ciudad,
+        departamento: formData.departamento,
         paymentMethod: formData.paymentMethod
       },
       {
