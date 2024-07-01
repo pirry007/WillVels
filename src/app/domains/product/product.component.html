@@ -20,7 +20,11 @@
           <li>{{ product()?.scent[2] }}</li>
         </ul>
         <div class="car-button">
-          <button class="add-cart" (click)="addToCart(product)">
+          <button
+            class="add-cart"
+            (click)="addToCart(product)"
+            routerLink="/checkout"
+          >
             Add to the cart and checkout
           </button>
           <button class="add-cart" (click)="addToCart(product)">

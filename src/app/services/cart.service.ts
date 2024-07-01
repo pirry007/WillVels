@@ -14,7 +14,7 @@ export class CartService {
     let total = 0;
 
     productsMap.forEach(product => {
-      total += product.price * product.quantity;
+      total += product.size[0].price * product.quantity;
     });
 
     return total;
