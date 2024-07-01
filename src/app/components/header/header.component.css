@@ -9,19 +9,53 @@ header {
     background-color: #c6cebe;
 }
 
-nav ul{
+nav{
+    height: 60px;
     display: flex;
-    list-style: none;
-    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+
 }
 
-nav li {
-    text-decoration: underline;
-}
-
-nav a {
+.links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
     color: black;
 }
+
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover{
+    background-color: #88927e;
+}
+
+nav svg{
+    fill: white
+}
+
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
+    cursor: pointer;
+}
+
+
 
 .logo-container {
     height: 60px;
@@ -42,18 +76,9 @@ nav a {
     cursor: pointer;
 }
 
-.header-icons {
+.user-icons {
     display: flex;
-    gap: 20px;
     height: 100%;
-    padding-top: 10px;
-    padding-right: 10px;
-}
-/*-----------------------------------------------------*/
-
-aside {
-    display: flex;
-    align-content: space-between;
 }
 
 aside.cart {
@@ -104,6 +129,47 @@ aside .close{
 }
 
 @media (max-width: 767px){
-   
+
+    header {
+        justify-content: space-between;
+    }
+   .links-container{
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.479);
+    backdrop-filter: blur(6px);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+   }
+
+   nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+   }
+
+   .nav-links {
+    display: none;
+   }
+
+   .user-icons{
+    display: block;
+    width: 100%;
+   }
+   .open-sidebar-button, .close-sidebar-button{
+    display: block;
+    padding: 20px;
+   }
+    #sidebar-active:checked ~ .links-container{
+        right: 0;
+    }
 }
 

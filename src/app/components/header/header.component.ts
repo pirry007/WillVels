@@ -37,6 +37,7 @@ total = this.cartService.total;
 
   logout(){
     this.authService.removeToken();
+    alert('has cerrado sesion')
     this.router.navigate(["/login"])
   }
 }
