@@ -1,14 +1,15 @@
 .products {
-    border: 2px solid rgb(204, 163, 250);
-    background-color: rgb(208, 200, 252);
+    border: 2px solid var(--secondary-color);
+    background-color: var(--primary-color);
     border-radius: 6px;
-    max-height: 350px;
+    max-height: 500px;
     display: flex;
     flex-direction: column;
     align-content: center;
     margin: 0 auto;
     transition: all 0.5s;
 }
+
 
 .products:hover {
     transform: scale(1.03);

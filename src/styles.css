@@ -4,9 +4,16 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+    --primary-color: #EDD5D8;
+    --secondary-color: #D8ABB7;
+    --third-color: #FCF4F0;
+    --fourth-color: #C6CEBE;
+}
+
 body {
     margin: 0;
     height: 100%;
-    background-color: #fcf4f0;
+    background-color: var(--secondary-color);
 }
 

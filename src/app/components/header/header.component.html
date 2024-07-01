@@ -29,7 +29,7 @@
       
                 <a *ngIf="isLogged()" [routerLink]="['/profile']">Perfil</a>
                 <a [routerLink]="['/catalogue']">Catalogue</a>
-                <a [routerLink]="['']">about us</a>
+                <a *ngIf="isLogged()" (click)="logout()">Cerrar sesion</a>
               
       <div class="user-icons">
         @if(!isLogged()){
@@ -58,6 +58,6 @@
     <h3>
       Total <span>{{ total() | currency }}</span>
     </h3>
-    <a routerLink="/checkout" class="checkout">Checkout</a>
+    <a [routerLink]="['/checkout']" class="checkout">Checkout</a>
   </div>
 </aside>
