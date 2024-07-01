@@ -6,6 +6,8 @@ import { ProductComponent } from './domains/product/product.component';
 import { LoginComponent } from './domains/login/login.component';
 import { RegisterComponent } from './domains/register/register.component';
 import { redirectIfLogged } from './guards/redirectLogged.guard';
+import { ProfileComponent } from './domains/profile/profile.component';
+import { loginGuard } from './guards/login.guard';
 
 export const routes: Routes = [
   { path: 'catalogue', component: CatalogueComponent },
@@ -13,5 +15,6 @@ export const routes: Routes = [
   { path: 'product/:id', component: ProductComponent },
   { path: 'login', component: LoginComponent, canActivate:[redirectIfLogged] },
   { path: 'register', component: RegisterComponent, canActivate: [redirectIfLogged]},
-  { path: 'checkout', component: CheckoutComponent, canActivate: [redirectIfLogged]},
+  { path: 'profile', component: ProfileComponent, canActivate: [loginGuard]},
+  { path: 'checkout', component: CheckoutComponent, canActivate: [loginGuard]},
 ];

@@ -6,7 +6,7 @@ footer {
     align-content: center;
     width: 100%;
     justify-content: space-between;
-    background-color: rgb(177, 230, 255);
+    background-color: var(--fourth-color);
 }
   .ubicacion {
     display: flex;
@@ -32,6 +32,22 @@ footer {
   .footernav ul li {
     margin: 5px;
   }
+
+  a{
+    height: 100%;
+    padding: 0 20px;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+a:hover{
+    background-color: #88927e;
+}
 
   h3 {
     margin: auto 10px;

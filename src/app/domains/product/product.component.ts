@@ -20,10 +20,10 @@ export class ProductComponent {
 
   private productsService = inject(ProductsService)
 
-  product = signal<any | Product>([])
-
+  product = signal<any| Product>(null)
+  
   ngOnInit(){
-    console.log(this.product)
+    console.log(this.product())
     if (this.id !== undefined) {
       this.productsService.getProductById(this.id).subscribe({
         next: (response)=>{
@@ -31,7 +31,6 @@ export class ProductComponent {
           console.log(this.product)
         }
       })
-      console.log(this.product())
     }
   }
 

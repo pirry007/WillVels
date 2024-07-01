@@ -33,4 +33,17 @@ export class UserService {
       return false
     }
   }
+
+  updateUser(formValues: User) {
+    return this.http.patch('http://localhost:3000/api/users/:id', {
+      firstname: formValues.firstname,
+      lastname: formValues.lastname,
+      email: formValues.email,
+      password: formValues.password,
+    });
+  }
+
+  getUserIdByEmail(email: string) {
+    return this.http.get(`http://localhost:3000/api/users/:id`, { params: { email } });
+  }
 }
