@@ -8,19 +8,20 @@
     </p>
   </div>
   <section class="grid-container">
-    @for (product of products(); track product.id) {<a
-      [routerLink]="['/product', product._id]"
-    >
+    @for (product of products(); track product.id) {
+    <div>
       <app-card-product
         [titulo]="product.name"
         [description]="product.description"
         [image]="product.image"
         [price]="product.size[0].price"
+        [routerLink]="['/product', product._id]"
       />
-    </a>
-    <button class="add-cart" (click)="addToCart(product)">
-      Agregar al Carrito
-    </button>
+      <button class="add-cart" (click)="addToCart(product)">
+        Agregar al Carrito
+      </button>
+    </div>
+
     }
   </section>
 </main>

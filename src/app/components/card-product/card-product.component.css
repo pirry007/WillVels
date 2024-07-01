@@ -2,7 +2,7 @@
     border: 2px solid rgb(204, 163, 250);
     background-color: rgb(208, 200, 252);
     border-radius: 6px;
-    height: 500px;
+    max-height: 350px;
     display: flex;
     flex-direction: column;
     align-content: center;
