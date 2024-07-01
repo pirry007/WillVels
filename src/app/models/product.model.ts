@@ -4,9 +4,9 @@ export interface Product {
   genre: string;
   image: string;
   name: string;
-  price: number;
+  quantity: number;
   review: string;
-  size: number;
+  size: Array<{ code: string, price: number }>;
   stock: number;
   __v: 0;
   _id: string;

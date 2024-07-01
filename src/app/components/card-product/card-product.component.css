@@ -2,7 +2,7 @@
     border: 2px solid rgb(204, 163, 250);
     background-color: rgb(208, 200, 252);
     border-radius: 6px;
-    max-height: 350px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -16,8 +16,8 @@
 }
 
 .image-container {
-    height: 300px;
-    max-height: 400px;
+    
+    height: 350px;
 }
 
 .products img {
