@@ -2,6 +2,7 @@
     border: 2px solid var(--secondary-color);
     background-color: var(--primary-color);
     border-radius: 6px;
+    height: 500px;
     max-height: 500px;
     display: flex;
     flex-direction: column;
@@ -17,8 +18,8 @@
 }
 
 .image-container {
-    height: 300px;
-    max-height: 400px;
+    
+    height: 350px;
 }
 
 .products img {

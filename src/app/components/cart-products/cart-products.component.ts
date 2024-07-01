@@ -13,7 +13,8 @@ import { CurrencyPipe } from '@angular/common';
 })
 export class CartProductsComponent {
  private cartService = inject(CartService);
-  @Input() product: any
+  @Input() product!: Product 
+  
 
   productQuantity = new FormControl(0);
 
@@ -22,6 +23,7 @@ export class CartProductsComponent {
   ngOnChanges(changes: SimpleChanges){
     if(changes['product'] && this.product){
       this.productQuantity.setValue(this.product.quantity);
+      console.log(this.product)
     }
   }
 
