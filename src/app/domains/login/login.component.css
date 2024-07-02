@@ -52,8 +52,13 @@ h3 {
   input {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: none;
+    background-color: #fff2f2;
     border-radius: 5px;
+  }
+
+  input:focus {
+    outline: none;
   }
 
   button {

@@ -53,6 +53,7 @@ export class LoginComponent {
         next: (response: any) => {
           if (response.token) {
             this.authService.setToken(response.token);
+            alert('Te has logeado')
             this.router.navigate(['']);
           } else {
             this.formInvalid = true
