@@ -41,7 +41,7 @@
     <div class="form">
       <form [formGroup]="updateForm" (submit)="onSubmit($event)">
         <div class="input-container">
-          <label for="firstname">Nombre</label>
+          <label for="firstname">Nuevo Nombre</label>
           <input type="text" id="firstname" formControlName="firstname" />
           @if (firstname?.invalid && firstname?.hasError('required') &&
           firstname?.touched) {
@@ -49,7 +49,7 @@
           }
         </div>
         <div class="input-container">
-          <label for="lastname">Apellido</label>
+          <label for="lastname">Nuevo Apellido</label>
           <input type="text" id="lastname" formControlName="lastname" />
           @if (lastname?.invalid && lastname?.hasError('required') &&
           lastname?.touched) {
@@ -57,7 +57,7 @@
           }
         </div>
         <div class="input-container">
-          <label for="email">Email</label>
+          <label for="email">Nuevo Email</label>
           <input type="text" id="email" formControlName="email" />
           @if (email?.invalid && email?.hasError('required') && email?.touched)
           {
@@ -68,7 +68,7 @@
         </div>
 
         <div class="input-container">
-          <label for="password">Crear Contraseña</label>
+          <label for="password">Crear nueva Contraseña</label>
           <input type="password" id="password" formControlName="password" />
           @if (password?.invalid && password?.hasError('required') &&
           password?.touched) {

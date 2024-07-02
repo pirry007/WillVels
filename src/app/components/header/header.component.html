@@ -39,7 +39,8 @@
 
       <a *ngIf="isLogged()" [routerLink]="['/profile']">Perfil</a>
       <a [routerLink]="['/catalogue']">Catalogue</a>
-      <a *ngIf="isLogged()" (click)="logout()">Cerrar sesion</a>
+      <a *ngIf="isLogged()" [routerLink]="['/profile']">Perfil</a>
+      <a id="log-out" *ngIf="isLogged()" (click)="logout()">Cerrar sesion</a>
 
       <div class="user-icons">
         @if(!isLogged()){
@@ -87,6 +88,11 @@
     <h3>
       Total <span>{{ total() | currency }}</span>
     </h3>
+    @if(isLogged()){
     <a [routerLink]="['/checkout']" class="checkout">Checkout</a>
+    } @if (!isLogged()){<a class="no-checkout"
+      >Debes estar logeado para poder comprar</a
+    >
+    <button [routerLink]="['/login']" class="primary-button">Login</button>}
   </div>
 </aside>

@@ -46,6 +46,11 @@ nav a{
     transition: 0.5s ease-in-out;
 }
 
+
+#log-out{
+    color: white;
+}
+
 nav a:hover{
     background-color: #88927e;
 }
@@ -132,7 +137,33 @@ aside .close{
     background: none;
     cursor: pointer;
     padding: 5px;
+    background-color: #ff4a4a;
+    color: white;
+    transition: 0.4s ease;
 }
+
+aside .close:hover{
+    background-color: #b62a2a;
+}
+
+.no-checkout {
+    color: black;
+    text-decoration: none;
+}
+
+.primary-button {
+    background-color: rgb(117, 194, 117);
+    transition: 0.4s ease;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .primary-button:hover {
+    background-color: rgb(89, 156, 89);
+    color: rgb(255, 255, 255);
+  }
 
 .details{
     display: flex;
