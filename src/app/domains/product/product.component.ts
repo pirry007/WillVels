@@ -23,7 +23,6 @@ export class ProductComponent {
   product = signal<any| Product>(null)
   
   ngOnInit(){
-    console.log(this.product())
     if (this.id !== undefined) {
       this.productsService.getProductById(this.id).subscribe({
         next: (response)=>{
@@ -34,7 +33,7 @@ export class ProductComponent {
     }
   }
 
-  addToCart(product: any){
+  addToCart(product: Product){
     this.cartService.addToCart(product);
   }
 }

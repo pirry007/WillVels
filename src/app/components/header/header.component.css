@@ -88,7 +88,7 @@ aside.cart {
     position: fixed;
     top: 0;
     right: 0;
-    padding: 1rem;
+    padding: 2rem;
     transform: translateX(110%);
     transition: transform 0.4s ease-in-out;
     box-shadow:  -5px 1px 18px 0px rgba(0,0,0,0.75);
@@ -110,14 +110,15 @@ aside.cart.show{
 
 aside .close{
     position: absolute;
-    top: 23px;
+    font-size: 30px;
+    top: 20px;
     right: 20px;
+    width: 30px;
     border: none;
     border-radius: 5px;
     background: none;
     cursor: pointer;
     padding: 5px;
-    background-color: #d8abb7;
 }
 
 .details{
@@ -128,10 +129,6 @@ aside .close{
 
 @media (max-width: 1023px){
    
-}
-
-@media (max-width: 768px){
-  
 }
 
 @media (max-width: 767px){
@@ -177,5 +174,11 @@ aside .close{
     #sidebar-active:checked ~ .links-container{
         right: 0;
     }
+
+    aside.cart{
+        width: 80vw;
+        
+    }
 }
+
 

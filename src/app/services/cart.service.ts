@@ -78,7 +78,7 @@ export class CartService {
     });
 
     return this.http.post(
-      "http://localhost:3000/api/orders",
+      "http://localhost:3000/api/purchases",
       {
         products: productsArray,
         total: this.total(),

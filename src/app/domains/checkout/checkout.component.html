@@ -5,6 +5,11 @@
     @for(product of products().values(); track product._id){
     <app-cart-products [product]="product" />
     }
+    <div>
+      <h3>
+        Total <span>{{ total() | currency }}</span>
+      </h3>
+    </div>
   </section>
   <section class="payment">
     <div>
@@ -30,7 +35,7 @@
             <option value="nequi">nequi</option>
           </select>
         </div>
-        <button type="submit">Realizar pedido</button>
+        <button type="submit" (click)="OnSubmit()">Realizar pedido</button>
       </form>
     </div>
   </section>

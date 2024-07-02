@@ -4,11 +4,13 @@ import { CartProductsComponent } from '../../components/cart-products/cart-produ
 import { CartService } from '../../services/cart.service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { CurrencyPipe } from '@angular/common';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-checkout',
   standalone: true,
-  imports: [HeaderComponent, CartProductsComponent, ReactiveFormsModule],
+  imports: [HeaderComponent, CartProductsComponent, ReactiveFormsModule, CurrencyPipe],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css'
 })
@@ -17,6 +19,7 @@ export class CheckoutComponent {
   private Router = inject(Router);
 
   products = this.CartService.products;
+  total = this.CartService.total;
 
   paymentDetails = new FormGroup({
     direccion: new FormControl(""),

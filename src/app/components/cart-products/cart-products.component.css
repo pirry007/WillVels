@@ -1,3 +1,10 @@
+article{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
 figure img {
-    height: 40px;
+    height: 120px;
 }

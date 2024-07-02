@@ -1,11 +1,13 @@
 <article class="product">
-  <figure>
-    <img [src]="'http://localhost:3000/uploads/' + product.image" [alt]="" />
-    <figcaption>
-      <p>{{ product.name }}</p>
-      <p>{{ product.size[0].price | currency }}</p>
-    </figcaption>
-  </figure>
+  <div class="presentation">
+    <figure>
+      <img [src]="'http://localhost:3000/uploads/' + product.image" [alt]="" />
+      <figcaption>
+        <p>{{ product.name }}</p>
+        <p>{{ product.size[0].price | currency }}</p>
+      </figcaption>
+    </figure>
+  </div>
   <div class="actions">
     <button (click)="delete(product._id)">Borrar</button>
     <form action="">
