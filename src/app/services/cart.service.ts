@@ -8,6 +8,7 @@ import { Product } from '../models/product.model';
 export class CartService {
   private http = inject(HttpClient)
   products = signal(new Map());
+  
 
   total = computed(() => {
     const productsMap = this.products();
@@ -23,6 +24,20 @@ export class CartService {
 
 
   constructor() { }
+  
+  saveCart(){
+    const productsArray = Array.from(this.products().entries())
+    localStorage.setItem('products', JSON.stringify(productsArray));
+  }
+
+  loadCart(){
+    const savedProducts = localStorage.getItem('products');
+    if(savedProducts){
+      const productsArray = JSON.parse(savedProducts);
+      const productsMap = new Map(productsArray);
+      this.products.set(productsMap);
+    }
+  }
 
   addToCart(product: Product) {
     this.products.update(productsMap => {
@@ -36,6 +51,8 @@ export class CartService {
       return new Map(productsMap);
     });
   }
+
+  
 
   incrementQuantity(productId: String){
     this.products.update(productsMap => {

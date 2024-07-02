@@ -1,10 +1,11 @@
 import { CommonModule, CurrencyPipe } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
+import { Component, Input, SimpleChanges, inject, signal } from '@angular/core';
 import { Router, RouterLinkWithHref } from '@angular/router';
 import { CartService } from '../../services/cart.service';
 import { UserService } from '../../services/user.service';
 import { AuthService } from '../../services/auth.service';
 import { CartProductsComponent } from '../cart-products/cart-products.component';
+import { FormControl } from '@angular/forms';
 
 
 @Component({
@@ -25,7 +26,12 @@ private router = inject(Router)
 cart = this.cartService.products;
 total = this.cartService.total;
 
-  showCart = false;
+showCart = false;
+
+products = signal<any>([])
+
+ngOnInit(){
+}
 
   toggleShowCart(){
     this.showCart = !this.showCart

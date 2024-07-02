@@ -1,10 +1,16 @@
 article{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    
 }
 
-
+.presentation {
+    display: flex;
+    flex-direction: row;
+    
+}
 
 figure img {
-    height: 120px;
+    height: 100px;
 }

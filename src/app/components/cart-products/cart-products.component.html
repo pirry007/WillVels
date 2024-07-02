@@ -1,11 +1,18 @@
 <article class="product">
   <div class="presentation">
     <figure>
-      <img [src]="'http://localhost:3000/uploads/' + product.image" [alt]="" />
-      <figcaption>
-        <p>{{ product.name }}</p>
-        <p>{{ product.size[0].price | currency }}</p>
-      </figcaption>
+      <div>
+        <img
+          [src]="'http://localhost:3000/uploads/' + product.image"
+          [alt]=""
+        />
+      </div>
+      <div>
+        <figcaption>
+          <p>{{ product.name }}</p>
+          <p>{{ product.size[0].price | currency }}</p>
+        </figcaption>
+      </div>
     </figure>
   </div>
   <div class="actions">

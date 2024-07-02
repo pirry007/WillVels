@@ -1,42 +1,59 @@
 <app-header />
 <main>
+  <section class="payment">
+    <div>
+      <h2>Detalles de pago</h2>
+      <div class="payment-details">
+        <form action="" (submit)="OnSubmit()" [formGroup]="paymentDetails">
+          <div class="formGroup">
+            <input type="text" name="name" id="name" />
+            <label for="name">Nombre</label>
+          </div>
+          <div class="formGroup">
+            <input type="text" name="lastname" id="lastname" />
+            <label for="lastname">Apellido</label>
+          </div>
+          <div class="formGroup">
+            <input type="text" name="direccion" id="direccion" />
+            <label for="direccion">Dirección de envío</label>
+          </div>
+          <div class="formGroup">
+            <input type="text" name="apto" id="apto" />
+            <label for="apto">Apartamento, casa, etc.</label>
+          </div>
+          <div class="formGroup">
+            <input type="text" name="ciudad" id="ciudad" />
+            <label for="ciudad">Ciudad de Residencia</label>
+          </div>
+          <div class="formGroup">
+            <input type="text" name="departamento" id="departamento" />
+            <label for="departamento">Departamento</label>
+          </div>
+          <h2>Información de pago</h2>
+          <div class="formGroup">
+            <input type="number" name="card-number" id="card-number" />
+            <label for="card-number">Número de tarjeta</label>
+          </div>
+          <div class="formGroup">
+            <input type="number" name="exp" id="exp" />
+            <label for="exp">Fecha de expiración</label>
+          </div>
+          <div class="formGroup">
+            <input type="number" name="cvv" id="cvv" />
+            <label for="cvv">CVV</label>
+          </div>
+          <button type="submit" (click)="OnSubmit()">Realizar pedido</button>
+        </form>
+      </div>
+    </div>
+  </section>
   <section class="cart">
     <h2>Productos en el carrito</h2>
     @for(product of products().values(); track product._id){
     <app-cart-products [product]="product" />
     }
-    <div>
-      <h3>
-        Total <span>{{ total() | currency }}</span>
-      </h3>
-    </div>
-  </section>
-  <section class="payment">
-    <div>
-      <h2>Detalles de pago</h2>
-      <form action="" (submit)="OnSubmit()" [formGroup]="paymentDetails">
-        <div class="formGroup">
-          <label for="direccion">Dirección de envío</label>
-          <input type="text" name="direccion" id="direccion" />
-        </div>
-        <div class="formGroup">
-          <label for="ciudad">Ciudad de Residencia</label>
-          <input type="text" name="ciudad" id="ciudad" />
-        </div>
-        <div class="formGroup">
-          <label for="departamento">Departamento</label>
-          <input type="text" name="departamento" id="departamento" />
-        </div>
-        <div class="formGroup">
-          <label for="paymentMethod">Método de pago</label>
-          <select name="" id="">
-            <option value="debit-card">Tarjéta débito</option>
-            <option value="transfer">Transferencia Bancaria</option>
-            <option value="nequi">nequi</option>
-          </select>
-        </div>
-        <button type="submit" (click)="OnSubmit()">Realizar pedido</button>
-      </form>
-    </div>
+    <h3>
+      Total <span>{{ total() | currency }}</span>
+    </h3>
   </section>
 </main>

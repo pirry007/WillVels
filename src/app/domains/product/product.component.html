@@ -15,37 +15,41 @@
       <p>
         {{ product()?.description }}
       </p>
-      
-        <ul class="scents">
-          <h4>Aromas disponibles</h4>
-          <li>{{ product()?.scent[0] }}</li>
-          <li>{{ product()?.scent[1] }}</li>
-          <li>{{ product()?.scent[2] }}</li>
-        </ul>
-        <ul>
-          <h4>precios</h4>
-          <li>
-            <strong>tamaño S :</strong
-            >{{
-              product()?.size[0].price | currency : "COP" : "symbol" : "1.0-0"
-            }}
-          </li>
-          <li>
-            <strong>tamaño M :</strong
-            >{{
-              product()?.size[1].price | currency : "COP" : "symbol" : "1.0-0"
-            }}
-          </li>
-          <li>
-            <strong>tamaño L :</strong
-            >{{
-              product()?.size[2].price | currency : "COP" : "symbol" : "1.0-0"
-            }}
-          </li>
-        </ul>
-      
+
+      <ul class="scents">
+        <h4>Aromas disponibles</h4>
+        <li>{{ product()?.scent[0] }}</li>
+        <li>{{ product()?.scent[1] }}</li>
+        <li>{{ product()?.scent[2] }}</li>
+      </ul>
+      <ul>
+        <h4>precios</h4>
+        <li>
+          <strong>tamaño S :</strong
+          >{{
+            product()?.size[0].price | currency : "COP" : "symbol" : "1.0-0"
+          }}
+        </li>
+        <li>
+          <strong>tamaño M :</strong
+          >{{
+            product()?.size[1].price | currency : "COP" : "symbol" : "1.0-0"
+          }}
+        </li>
+        <li>
+          <strong>tamaño L :</strong
+          >{{
+            product()?.size[2].price | currency : "COP" : "symbol" : "1.0-0"
+          }}
+        </li>
+      </ul>
+
       <div class="card-button">
-        <button class="add-cart secondary-button" (click)="addToCart(product())">
+        <button
+          class="add-cart secondary-button"
+          (click)="addToCart(product())"
+          routerLink="/checkout"
+        >
           Add to the cart and checkout
         </button>
         <button class="add-cart primary-button" (click)="addToCart(product())">

@@ -3,6 +3,7 @@
     <a [routerLink]="['']">
       <img src="../../../assets/images/LogoVels.png" alt="" id="logo" />
     </a>
+    <h2>WILLVELS</h2>
   </div>
   <nav>
     <input type="checkbox" id="sidebar-active" />
@@ -75,7 +76,7 @@
 <aside [ngClass]="showCart ? 'cart show' : 'cart'">
   <div class="show-products">
     <h2>Carrito</h2>
-    <button class="close" (click)="toggleShowCart()">X</button>
+    <button class="close" (click)="toggleShowCart()">Close</button>
     <section>
       @for(product of cart().values(); track product._id) {
       <app-cart-products [product]="product" />

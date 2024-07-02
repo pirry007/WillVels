@@ -5,6 +5,7 @@ import { ProductsService } from '../../services/products.service';
 import { CardProductComponent } from '../../components/card-product/card-product.component';
 import { RouterLinkWithHref } from '@angular/router';
 import { CartService } from '../../services/cart.service';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-catalogue',
@@ -25,5 +26,9 @@ export class CatalogueComponent {
         this.products.set(response)
       }
     })
+  }
+
+  addToCart(product: Product){
+    this.cartService.addToCart(product);
   }
 }
