@@ -8,20 +8,25 @@ footer {
     justify-content: space-between;
     background-color: var(--fourth-color);
 }
-  .ubicacion {
+  #logo {
     display: flex;
     align-content: center;
     border-radius: 5px;
     height: 100px;
   }
 
+  #logo img{
+    height: 100%;
+  }
+
   .ubicacion img {
     height: 100%
   }
 
-  .footernav {
+  nav.footernav {
     display: flex;
-    align-content: center;
+    align-items: center;
+    margin: auto 0;
   }
 
   .footernav ul {
@@ -34,14 +39,13 @@ footer {
   }
 
   a{
-    height: 100%;
     padding: 0 20px;
     border-radius: 2px;
     display: flex;
     cursor: pointer;
     align-items: center;
     text-decoration: none;
-    color: white;
+    color: black;
     transition: 0.5s ease-in-out;
 }
 
@@ -51,10 +55,12 @@ a:hover{
 
   h3 {
     margin: auto 10px;
+    font-size: medium;
   }
 
   footer .iconos {
     display: flex;
+
     color: white;
     font-family: DM Serif Display;
     align-self: center;
@@ -65,7 +71,7 @@ a:hover{
     align-content: center;
   }
 
-  footer .iconos img {
-    height: 40px;
+  footer img {
+    height: 24px;
     margin: 5px;
   }

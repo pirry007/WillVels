@@ -128,10 +128,16 @@ aside .close{
 }
 
 @media (max-width: 1023px){
-   
+    aside.cart{
+        width: 40%;
+      }
 }
 
 @media (max-width: 767px){
+
+    aside.cart{
+        width: 100%;
+      }
 
     header {
         justify-content: space-between;

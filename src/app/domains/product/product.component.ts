@@ -27,8 +27,7 @@ export class ProductComponent {
       this.productsService.getProductById(this.id).subscribe({
         next: (response)=>{
           this.product.set(response)
-          console.log(this.product)
-        }
+        }, error: (error)=>console.log(error)
       })
     }
   }

@@ -11,7 +11,7 @@
     --fourth-color: #C6CEBE;
 }
 
-body {
+body#body {
     margin: 0;
     height: 100%;
     background-color: var(--secondary-color);

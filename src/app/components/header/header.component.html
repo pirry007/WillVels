@@ -72,7 +72,7 @@
     </div>
   </nav>
 </header>
-<aside [ngClass]="showCart() ? 'cart show' : 'cart'">
+<aside [ngClass]="showCart ? 'cart show' : 'cart'">
   <div class="show-products">
     <h2>Carrito</h2>
     <button class="close" (click)="toggleShowCart()">X</button>

@@ -83,6 +83,8 @@ export class ProfileComponent {
       this.userService.getUser().subscribe({
         next: (response: any)=>{
           this.user.set(response)
+        }, error: (error)=> {
+          console.log(error)
         }
       })
     }
