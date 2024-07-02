@@ -2,31 +2,55 @@
 <main>
   <section class="ficha-producto">
     <div class="product-image">
-      <img [src]="'http://localhost:3000/uploads/' + product().image" />
+      <img [src]="'http://localhost:3000/uploads/' + product()?.image" />
     </div>
-    <div class="text-container">
-      <div class="detail">
+    <div class="detail-container">
+      <div class="title-price">
         <h1>{{ product()?.name }}</h1>
         <h2>
+          Precios desde:
           {{ product()?.size[0].price | currency : "COP" : "symbol" : "1.0-0" }}
         </h2>
-        <p>
-          {{ product()?.description }}
-        </p>
-        <ul>
-          <p>aromas disponibles</p>
+      </div>
+      <p>
+        {{ product()?.description }}
+      </p>
+      
+        <ul class="scents">
+          <h4>Aromas disponibles</h4>
           <li>{{ product()?.scent[0] }}</li>
           <li>{{ product()?.scent[1] }}</li>
           <li>{{ product()?.scent[2] }}</li>
         </ul>
-        <div class="car-button">
-          <button class="add-cart" (click)="addToCart(product())">
-            Add to the cart and checkout
-          </button>
-          <button class="add-cart" (click)="addToCart(product())">
-            Add to the cart
-          </button>
-        </div>
+        <ul>
+          <h4>precios</h4>
+          <li>
+            <strong>tamaño S :</strong
+            >{{
+              product()?.size[0].price | currency : "COP" : "symbol" : "1.0-0"
+            }}
+          </li>
+          <li>
+            <strong>tamaño M :</strong
+            >{{
+              product()?.size[1].price | currency : "COP" : "symbol" : "1.0-0"
+            }}
+          </li>
+          <li>
+            <strong>tamaño L :</strong
+            >{{
+              product()?.size[2].price | currency : "COP" : "symbol" : "1.0-0"
+            }}
+          </li>
+        </ul>
+      
+      <div class="card-button">
+        <button class="add-cart secondary-button" (click)="addToCart(product())">
+          Add to the cart and checkout
+        </button>
+        <button class="add-cart primary-button" (click)="addToCart(product())">
+          Add to the cart
+        </button>
       </div>
     </div>
   </section>

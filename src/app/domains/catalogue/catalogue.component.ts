@@ -26,8 +26,4 @@ export class CatalogueComponent {
       }
     })
   }
-
-  addToCart(product: any){
-    this.cartService.addToCart(product)
-  }
 }

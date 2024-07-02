@@ -71,26 +71,48 @@ button {
     width: fit-content;
 }
 
-@media (max-width: 1023px){
-   
+@media (min-width: 768px) and (max-width: 1023){
+    .products{
+        
+    background-color: var(--primary-color);
+    }
+    .products {
+        height: auto;
+       }
 }
 
-@media (max-width: 768px){
-   .products {
-    height: auto;
-   }
+@media (max-width: 767px) and (min-width: 521px){
+    .products{
+        border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    }
+    .image-container {
+        width: 100%;
+       }
+       .image-container img {
+        width: 100%;
+       }
+       .products {
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+       }
 }
 
-@media (max-width: 767px){
-   .image-container {
-    width: 100%;
-   }
-   .image-container img {
-    width: 100%;
-   }
-   .products {
-    width: 80%;
-    margin: 0 auto;
-    height: auto;
-   }
+@media (max-width: 520px){
+    .products{
+        border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    }
+    .image-container {
+        width: 100%;
+       }
+       .image-container img {
+        width: 100%;
+       }
+       .products {
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+       }
 }

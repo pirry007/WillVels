@@ -41,24 +41,27 @@ section.grid-container{
 .ver-todo-button{
     text-align: center;
     border: none;
-    background-color: rgb(167, 73, 255);
     color: white;
     border-radius: 6px;
     padding: 10px 20px;
     width: fit-content;
-    transition: all 0.5s;
+    background-color: rgb(230, 129, 255);
+    transition: 0.4s ease;
+    color: white;
 }
 
 .ver-todo-button:hover {
     transform: scale(1.03);
-    box-shadow:  6px 6px 6px 1px rgba(26, 25, 26, 0.185);;
+    box-shadow:  6px 6px 6px 1px rgba(26, 25, 26, 0.185);
+    background-color: rgb(200, 83, 230);
 }
-
 .verTodo {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+
+
 
 img {
     width: 100%;
@@ -83,20 +86,26 @@ button a {
     color: white;
 }
 
-@media (max-width: 1023px){
+@media (max-width: 1024px){
     section.grid-container{
         grid-template-columns: 1fr 1fr 1fr;
         padding: 20px;
     }
 }
 
-@media (max-width: 768px){
+@media (min-width: 768px) and (max-width: 1023){
     section.grid-container{
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) and (min-width: 521px){
+    section.grid-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 520px){
     section.grid-container{
         grid-template-columns: 1fr;
     }

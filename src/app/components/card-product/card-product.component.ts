@@ -22,9 +22,9 @@ export class CardProductComponent {
   @Input() titulo: string = '';
   @Input() description: string = '';
   @Input() image: string = '';
-  @Input() price: number = 0;
+  @Input() priceS: number = 0;
 
-  addToCart(product: any){
+  addToCart(product: Product){
     this.cartService.addToCart(product);
   }
 }

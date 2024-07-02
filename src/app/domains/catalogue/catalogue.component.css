@@ -47,13 +47,19 @@ button.add-cart {
     }
 }
 
-@media (max-width: 768px){
+@media (min-width: 768px) and (max-width: 1022){
+    section.grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 521px){
     section.grid-container{
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width: 767px){
+@media (max-width: 520px){
     section.grid-container{
         grid-template-columns: 1fr;
     }

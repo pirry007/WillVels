@@ -25,11 +25,10 @@ private router = inject(Router)
 cart = this.cartService.products;
 total = this.cartService.total;
 
-  showCart = signal(false);
+  showCart = false;
 
   toggleShowCart(){
-    this.showCart.update(prevState => !prevState);
-    console.log(this.total)
+    this.showCart = !this.showCart
   }
 
   isLogged(){

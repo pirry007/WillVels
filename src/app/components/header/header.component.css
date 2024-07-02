@@ -128,15 +128,10 @@ aside .close{
 
 @media (max-width: 1023px){
     aside.cart{
-        width: 60%;
+        width: 40%;
       }
 }
 
-@media (max-width: 768px){
-  aside.cart{
-    width: 60%;
-  }
-}
 
 @media (max-width: 767px){
 

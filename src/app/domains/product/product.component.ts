@@ -23,13 +23,11 @@ export class ProductComponent {
   product = signal<any| Product>(null)
   
   ngOnInit(){
-    console.log(this.product())
     if (this.id !== undefined) {
       this.productsService.getProductById(this.id).subscribe({
         next: (response)=>{
           this.product.set(response)
-          console.log(this.product)
-        }
+        }, error: (error)=>console.log(error)
       })
     }
   }
