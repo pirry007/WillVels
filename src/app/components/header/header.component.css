@@ -127,14 +127,22 @@ aside .close{
 }
 
 @media (max-width: 1023px){
-   
+    aside.cart{
+        width: 60%;
+      }
 }
 
 @media (max-width: 768px){
-  
+  aside.cart{
+    width: 60%;
+  }
 }
 
 @media (max-width: 767px){
+
+    aside.cart{
+        width: 100%;
+      }
 
     header {
         justify-content: space-between;
