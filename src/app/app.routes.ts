@@ -8,7 +8,6 @@ import { RegisterComponent } from './domains/register/register.component';
 import { redirectIfLogged } from './guards/redirectLogged.guard';
 import { ProfileComponent } from './domains/profile/profile.component';
 import { loginGuard } from './guards/login.guard';
-import { CheckoutComponent } from './domains/checkout/checkout.component';
 
 export const routes: Routes = [
   { path: 'catalogue', component: CatalogueComponent },

@@ -14,11 +14,11 @@ import { CartService } from '../../services/cart.service';
   styleUrl: './product.component.css',
 })
 export class ProductComponent {
-  private cartService = inject(CartService)
   @Input() id?: string;
-
+  
+  private cartService = inject(CartService)
   private productsService = inject(ProductsService)
-
+  
   product = signal<any| Product>(null)
   
   ngOnInit(){
@@ -32,7 +32,8 @@ export class ProductComponent {
     }
   }
 
-  addToCart(product: any){
+  addToCart(product: Product){
+    console.log(product)
     this.cartService.addToCart(product);
   }
 }
