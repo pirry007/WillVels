@@ -54,7 +54,7 @@
   </nav>
 </header>
 <aside [ngClass]="showCart() ? 'cart show' : 'cart'">
-  <div>
+  <div class="show-products">
     <h2>Carrito</h2>
     <button class="close" (click)="toggleShowCart()">Close</button>
     <section>
@@ -63,7 +63,7 @@
       }
     </section>
   </div>
-  <div>
+  <div class="details">
     <h3>
       Total <span>{{ total() | currency }}</span>
     </h3>

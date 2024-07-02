@@ -29,6 +29,7 @@ total = this.cartService.total;
 
   toggleShowCart(){
     this.showCart.update(prevState => !prevState);
+    console.log(this.total)
   }
 
   isLogged(){

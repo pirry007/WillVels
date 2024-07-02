@@ -5,11 +5,12 @@ import { ProductsService } from '../../services/products.service';
 import { Product } from '../../models/product.model';
 import { CurrencyPipe } from '@angular/common';
 import { CartService } from '../../services/cart.service';
+import { Router, RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, CurrencyPipe],
+  imports: [HeaderComponent, FooterComponent, CurrencyPipe, RouterLinkWithHref],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
 })
@@ -27,6 +28,7 @@ export class ProductComponent {
       this.productsService.getProductById(this.id).subscribe({
         next: (response)=>{
           this.product.set(response)
+          console.log(this.product)
         }
       })
     }
