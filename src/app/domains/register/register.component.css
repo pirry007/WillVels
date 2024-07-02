@@ -21,7 +21,7 @@
   
   
   label {
-    color: rgb(204, 33, 204);
+    color: rgb(165, 0, 165);
   }
 
   input {
@@ -39,11 +39,22 @@
   button {
     margin-top: 10px;
     border-radius: 5px;
-    border-color: rgb(225, 149, 255);
+    border: none;
     height: 30px;
-    background-color: rgb(255, 160, 227);
     color: white;
   }
+
+  .secondary-button {
+    background-color: rgb(117, 194, 117);
+    align-self: self-end;
+    transition: 0.4s ease;
+  }
+
+  .secondary-button:hover {
+    background-color: rgb(89, 156, 89);
+    color: rgb(255, 255, 255);
+  }
+
 
   span {
     display: flex;
@@ -54,6 +65,8 @@
   .small-input {
     color: red;
   }
+
+
 
   .login {
     display: flex;
@@ -68,8 +81,12 @@
   .login a {
     padding: 5px;
     border-radius: 5px;
-    border-color: rgb(225, 149, 255);
-    background-color: rgb(255, 160, 227);
+    background-color: rgb(160, 160, 160);
     color: white;
     text-decoration: none;
+    transition: 0.4s ease;
+  }
+
+  .login a:hover {
+    background-color: rgb(139, 139, 139);
   }

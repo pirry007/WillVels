@@ -31,7 +31,7 @@
   
   
   label {
-    color: rgb(204, 33, 204);
+    color: rgb(165, 0, 165);
   }
 
   input {
@@ -53,13 +53,20 @@
 
   button {
     margin-top: 10px;
+    border: none;
     border-radius: 5px;
-    border-color: rgb(225, 149, 255);
     height: 30px;
     background-color: rgb(255, 160, 227);
     color: white;
   }
 
+  .primary-button {
+    background-color: rgb(255, 91, 91);
+  }
+
+  .secondary-button {
+    background-color: rgb(117, 194, 117);
+  }
 
   span {
     display: flex;

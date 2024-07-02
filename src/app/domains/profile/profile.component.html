@@ -11,15 +11,15 @@
         </p>
       </div>
         <div class="input-container">
-          <label>Cambiar Nombre</label>
+          <label>Nombre actual</label>
           <input class="read-inputs" [value]="user().firstname" readonly />
         </div>
         <div class="input-container">
-          <label>Cambiar Apellido</label>
+          <label>Apellido actual</label>
           <input class="read-inputs" [value]="user().lastname" readonly />
         </div>
         <div class="input-container">
-          <label>Cambiar Email</label>
+          <label>Email actual</label>
           <input class="read-inputs" [value]="user().email" readonly />
         </div>
 
@@ -79,10 +79,11 @@
         </div>
         <span>
           <div class="login">
-            <a (click)="toggleUpdateUser()">Cancelar</a>
+            <a class="primary-button" (click)="toggleUpdateUser()">Cancelar</a>
           </div>
           <button
           type="submit"
+          class="secondary-button"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
           >
