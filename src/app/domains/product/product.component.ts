@@ -15,11 +15,11 @@ import { Router, RouterLinkWithHref } from '@angular/router';
   styleUrl: './product.component.css',
 })
 export class ProductComponent {
-  private cartService = inject(CartService)
   @Input() id?: string;
-
+  
+  private cartService = inject(CartService)
   private productsService = inject(ProductsService)
-
+  
   product = signal<any| Product>(null)
   
   ngOnInit(){
