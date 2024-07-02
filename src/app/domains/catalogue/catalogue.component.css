@@ -37,6 +37,9 @@ a {
 
 button.add-cart {
     height: auto;
+    background-color: #c6cebe;
+    border-radius: 6px;
+    border: 1px;
 }
 
 
