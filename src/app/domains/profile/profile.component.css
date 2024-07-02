@@ -10,7 +10,7 @@
 }
 
 .card {
-    background: #f7f7f7;
+    background-color: var(--third-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -60,6 +60,7 @@
     color: white;
   }
 
+
   span {
     display: flex;
     justify-content: space-between;
@@ -106,3 +107,25 @@
     color: white;
     text-decoration: none;
   }
+
+  @media (max-width: 1023px){
+    .grid-container{
+    grid-template-columns: auto;
+  }
+  .card{
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px){
+  .grid-container{
+    grid-template-columns: auto;
+  }
+    
+}
+
+@media (max-width: 767px){
+    .grid-container{
+      grid-template-columns: auto;
+    }
+}

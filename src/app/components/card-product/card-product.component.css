@@ -1,6 +1,6 @@
 .products {
-    border: 2px solid var(--secondary-color);
-    background-color: var(--primary-color);
+    border: 2px solid var(--third-color);
+    background-color: var(--third-color);
     border-radius: 6px;
     height: 500px;
     max-height: 500px;

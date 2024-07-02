@@ -5,7 +5,6 @@ h1,h2,p,li {
 main {
     max-width: 1000px;
     margin: 50px auto;
-    background-color: #fcf4f0;
 }
 
 section.ficha-producto{
@@ -42,12 +41,18 @@ div.text-container{
 button{
     margin-top: 10px;
     border-radius: 5px;
-    border-color: rgb(225, 149, 255);
+    border-color: var(--secondary-color);
     height: 50px;
     width: 70%;
-    background-color: rgb(255, 160, 227);
+    background-color: var(--primary-color);
     color: white;
   }
+
+button:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.616);
+    transition: 0.5s ease-in-out;
+}
 
 ul {
     margin-top: 50px;

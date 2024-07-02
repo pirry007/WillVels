@@ -24,8 +24,8 @@
         </div>
 
       <span>
-        <a (click)="logOut()">Cerrar sesion</a>
-        <a *ngIf="!updateUser" (click)="toggleUpdateUser()">Editar</a>
+        <a class="primary-button" (click)="logOut()">Cerrar sesion</a>
+        <a class="secondary-button"*ngIf="!updateUser" (click)="toggleUpdateUser()">Editar</a>
       </span>
   </div>
 
