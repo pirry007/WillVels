@@ -37,7 +37,7 @@ main {
 
 .formGroup label {
     position: absolute;
-    top: 10%;
+    top: 8%;
     left: 15px;
     transform: translateY(-50%);
     color: #777777;
