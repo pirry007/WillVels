@@ -10,10 +10,10 @@ export class ProductsService {
   constructor() {}
 
   getProducts() {
-    return this.http.get('http://3.15.162.98:3000/api/products');
+    return this.http.get('http://3.19.221.151:3000/api/products');
   }
 
   getProductById(id: string) {
-    return this.http.get('http://3.15.162.98:3000/api/products/' + id);
+    return this.http.get('http://3.19.221.151:3000/api/products/' + id);
   }
 }

@@ -12,7 +12,7 @@ export class UserService {
   constructor() {}
 
   register(formValues: User) {
-    return this.http.post('http://3.15.162.98:3000/api/auth/register', {
+    return this.http.post('http://3.19.221.151:3000/api/auth/register', {
       firstname: formValues.firstname,
       lastname: formValues.lastname,
       email: formValues.email,
@@ -21,7 +21,7 @@ export class UserService {
   }
 
   login(formValues: any) {
-    return this.http.post('http://3.15.162.98:3000/api/auth/login', {
+    return this.http.post('http://3.19.221.151:3000/api/auth/login', {
       email: formValues.email,
       password: formValues.password,
     });
@@ -45,12 +45,12 @@ export class UserService {
   }
 
   getUser(){
-    return this.http.get('http://3.15.162.98:3000/api/users/' + this.getDecodedToken())
+    return this.http.get('http://3.19.221.151:3000/api/users/' + this.getDecodedToken())
   }
 
   updateUser(formValues: User) {
     return this.http.patch(
-      'http://3.15.162.98:3000/api/users/' + this.getDecodedToken(),
+      'http://3.19.221.151:3000/api/users/' + this.getDecodedToken(),
       {
         firstname: formValues.firstname,
         lastname: formValues.lastname,
