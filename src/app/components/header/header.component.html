@@ -38,7 +38,9 @@
       </label>
 
       <a *ngIf="isLogged()" [routerLink]="['/profile']">Perfil</a>
-      <a [routerLink]="['/catalogue']">Catalogue</a>
+      <a [routerLink]="['/catalogue']"
+        ><img src="/src/assets/images/ion--book-sharp.png" alt="" />Catalogue</a
+      >
       <a *ngIf="isLogged()" [routerLink]="['/profile']">Perfil</a>
       <a id="log-out" *ngIf="isLogged()" (click)="logout()">Cerrar sesion</a>
 
@@ -76,8 +78,8 @@
 </header>
 <aside [ngClass]="showCart ? 'cart show' : 'cart'">
   <div class="show-products">
-    <h2>Carrito</h2>
-    <button class="close" (click)="toggleShowCart()">Close</button>
+    <h2 class="cart-tittle">Productos</h2>
+    <button class="close" (click)="toggleShowCart()">X</button>
     <section>
       @for(product of cart().values(); track product._id) {
       <app-cart-products [product]="product" />

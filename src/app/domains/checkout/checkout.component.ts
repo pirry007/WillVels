@@ -22,9 +22,12 @@ export class CheckoutComponent {
   total = this.CartService.total;
 
   paymentDetails = new FormGroup({
+    name: new FormControl(""),
+    lastname: new FormControl(""),
     address: new FormControl(""),
+    apto: new FormControl(""),
     city: new FormControl(""),
-    departamento: new FormControl(""),
+    department: new FormControl(""),
     paymentMethod: new FormControl("")
   })
 

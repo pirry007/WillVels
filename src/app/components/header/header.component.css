@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-h2 {
-    font-family: "Roboto Condensed", sans-serif;
-}
-
-li{
-    font-family: Arial, Helvetica, sans-serif;
+h2, li {
+    font-family: "Montserrat", sans-serif;
 }
 
 header {
+    padding: 10px;
     display: flex;
     align-content: center;
     justify-content: space-between;
-    background-color: #c6cebe;
+    background-color: #DAE2E4;
 }
 
 nav {
@@ -42,7 +39,7 @@ nav a{
     cursor: pointer;
     align-items: center;
     text-decoration: none;
-    color: white;
+    color: black;
     transition: 0.5s ease-in-out;
 }
 
@@ -99,7 +96,7 @@ nav svg{
 }
 
 aside.cart {
-    background: linear-gradient(#88927e, #FCF4F0);
+    background: linear-gradient(#DAE2E4, #FCF4F0);
     height: 100vh;
     width: 30vw;
     position: fixed;
@@ -126,9 +123,14 @@ aside.cart.show{
     transform: translateX(0);
 }
 
+.cart-tittle {
+    font-size: 36px;
+    margin-top: 5px;
+}
+
 aside .close{
     position: absolute;
-    font-size: 20px;
+    font-size: 30px;
     top: 35px;
     right: 50px;
     width: 70px;
@@ -137,13 +139,12 @@ aside .close{
     background: none;
     cursor: pointer;
     padding: 5px;
-    background-color: #ff4a4a;
-    color: white;
+    color: black;
     transition: 0.4s ease;
 }
 
 aside .close:hover{
-    background-color: #b62a2a;
+    background-color: #9ea0ad;
 }
 
 .no-checkout {
