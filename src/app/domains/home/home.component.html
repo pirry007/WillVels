@@ -1,98 +1,58 @@
 <app-header />
 <main>
-  <div class="welcome">
-    <h1>BIENVENIDOS A WILLVELS!</h1>
-    <p>
-      Velas aromáticas unicas y encantadoras, diseñadas con formas distintivas
-      para transformar tu espacio con elegancia y fragancia.
-    </p>
-  </div>
-  <div
-    id="carouselExampleIndicators"
-    class="carousel slide"
-    data-bs-ride="carousel"
-  >
-    <div class="carousel-indicators">
-      <button
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide-to="0"
-        class="active"
-        aria-current="true"
-        aria-label="Slide 1"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide-to="1"
-        aria-label="Slide 2"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide-to="2"
-        aria-label="Slide 3"
-      ></button>
+  <div class="main-container">
+    <img
+      src="assets/images/image.png"
+      alt="Imagen de velas y flores"
+      class="imagen"
+    />
+    <div class="texto-encima">
+      <h1>WillVels ad lorem ipsum</h1>
+      <button class="boton-catalogo">Catálogo</button>
+      <button class="boton-contactanos">Contáctanos</button>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img
-          src="https://img.freepik.com/fotos-premium/velas-aromaticas-decorativas-color-morado-azul-perfumadas-radiance_1135748-17522.jpg"
-          class="d-block w-100 carousel-img"
-          alt="..."
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          src="https://img.freepik.com/fotos-premium/velas-aromaticas-decorativas-ambiente-relajante_535844-6110.jpg"
-          class="d-block w-100 carousel-img"
-          alt="..."
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          src="https://content.revistainteriores.es/medio/2023/12/12/velas-aromaticas-artesanales_12a5b249_231212162955_1280x794.jpg"
-          class="d-block w-100 carousel-img"
-          alt="..."
-        />
-      </div>
-    </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 
-  <h4>Productos disponibles</h4>
-  <section>
-    <section class="grid-container">
-      @for (product of products().slice(0, 8); track product._id){
-      <a [routerLink]="['/product', product._id]">
-        <app-card-product
-          [titulo]="product.name"
-          [description]="product.description"
-          [image]="product.image"
-          [priceS]="product.size[0].price"
-        />
-      </a>
-      }
-    </section>
-    <div class="verTodo">
-      <a [routerLink]="['catalogue']" class="ver-todo-button">Ver todo</a>
+  <section class="brief-slogan">
+    <div class="slogan-text">
+      <h3>Nuestro Lema</h3>
+      <p>
+        Encuentra la nueva pasión para tu hogar, con Will Vels vas a generar un
+        ambiente feliz y armonioso para tu familia y amigos
+      </p>
+    </div>
+
+    <div class="slogan-image">
+      <img src="assets\images\LogoVels.png" alt="" />
+    </div>
+  </section>
+
+  <section class="preview-section">
+    <div class="preview-image">
+      <a [routerLink]="['/product', products()[0]._id]"
+        ><img
+          [src]="'http://3.144.211.216:3000/uploads/' + products()[0].image"
+          alt=""
+      /></a>
+    </div>
+
+    <div class="preview-main">
+      <h3>Explora nuestras mejores experiencias con tus velas favoritas</h3>
+      <div class="image-carousel">
+        @for (product of products().slice(1,4); track product._id) {
+        <a [routerLink]="['/product', product._id]">
+          <div class="image-carousel-container">
+            <img
+              [src]="'http://3.144.211.216:3000/uploads/' + product.image"
+              alt=""
+            />
+          </div>
+        </a>
+        }
+      </div>
+      <div class="verTodo">
+        <a [routerLink]="['catalogue']" class="ver-todo-button">Ver Mas</a>
+      </div>
     </div>
   </section>
 </main>
