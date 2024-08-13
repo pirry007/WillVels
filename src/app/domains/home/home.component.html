@@ -7,53 +7,54 @@
       class="imagen"
     />
     <div class="texto-encima">
-      <h1>WillVels ad lorem ipsum</h1>
+      <h1>WillVels, velas para tu hogar</h1>
       <button class="boton-catalogo">Catálogo</button>
       <button class="boton-contactanos">Contáctanos</button>
     </div>
   </div>
-
-  <section class="brief-slogan">
-    <div class="slogan-text">
-      <h3>Nuestro Lema</h3>
-      <p>
-        Encuentra la nueva pasión para tu hogar, con Will Vels vas a generar un
-        ambiente feliz y armonioso para tu familia y amigos
-      </p>
-    </div>
-
-    <div class="slogan-image">
-      <img src="assets\images\LogoVels.png" alt="" />
-    </div>
-  </section>
-
-  <section class="preview-section">
-    <div class="preview-image">
-      <a [routerLink]="['/product', products()[0]._id]"
-        ><img
-          [src]="'http://3.144.211.216:3000/uploads/' + products()[0].image"
-          alt=""
-      /></a>
-    </div>
-
-    <div class="preview-main">
-      <h3>Explora nuestras mejores experiencias con tus velas favoritas</h3>
-      <div class="image-carousel">
-        @for (product of products().slice(1,4); track product._id) {
-        <a [routerLink]="['/product', product._id]">
-          <div class="image-carousel-container">
-            <img
-              [src]="'http://3.144.211.216:3000/uploads/' + product.image"
-              alt=""
-            />
-          </div>
-        </a>
-        }
+  <div class="first-container">
+    <section class="brief-slogan">
+      <div class="slogan-text">
+        <h3>Nuestro Lema</h3>
+        <p>
+          Encuentra la nueva pasión para tu hogar, con Will Vels vas a generar
+          un ambiente feliz y armonioso para tu familia y amigos
+        </p>
       </div>
-      <div class="verTodo">
-        <a [routerLink]="['catalogue']" class="ver-todo-button">Ver Mas</a>
+
+      <div class="slogan-image">
+        <img src="assets\images\LogoVels.png" alt="" />
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="preview-section">
+      <div class="preview-image">
+        <a [routerLink]="['/product', products()[0]._id]"
+          ><img
+            [src]="'http://localhost:3000/uploads/' + products()[0].image"
+            alt=""
+        /></a>
+      </div>
+
+      <div class="preview-main">
+        <h3>Explora nuestras mejores experiencias con tus velas favoritas</h3>
+        <div class="image-carousel">
+          @for (product of products().slice(1,4); track product._id) {
+          <a [routerLink]="['/product', product._id]">
+            <div class="image-carousel-container">
+              <img
+                [src]="'http://localhost:3000/uploads/' + product.image"
+                alt=""
+              />
+            </div>
+          </a>
+          }
+        </div>
+        <div class="verTodo">
+          <a [routerLink]="['catalogue']" class="ver-todo-button">Ver Mas</a>
+        </div>
+      </div>
+    </section>
+  </div>
 </main>
 <app-footer />

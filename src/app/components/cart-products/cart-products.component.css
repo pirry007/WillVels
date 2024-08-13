@@ -1,14 +1,14 @@
-article{
+.product {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+
 }
 
 .presentation {
     display: flex;
     flex-direction: row;
-    
+
 }
 
 figure img {

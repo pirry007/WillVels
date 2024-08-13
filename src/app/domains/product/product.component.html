@@ -7,10 +7,6 @@
     <div class="detail-container">
       <div class="title-price">
         <h1>{{ product()?.name }}</h1>
-        <h2>
-          Precios desde:
-          {{ product()?.size[0].price | currency : "COP" : "symbol" : "1.0-0" }}
-        </h2>
       </div>
       <p>
         {{ product()?.description }}
@@ -43,6 +39,9 @@
           }}
         </li>
       </ul>
+      <h2>
+        {{ product()?.size[0].price | currency : "COP" : "symbol" : "1.0-0" }}
+      </h2>
 
       <div class="card-button">
         <button

@@ -20,7 +20,7 @@ section.ficha-producto{
     margin: 0 auto;
     justify-content: space-between;
     background-color: var(--primary-color);
-    box-shadow: -5px 1px 14px 9px rgba(0,0,0,0.48);
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.61);
 }
 
 div.product-image {
@@ -128,7 +128,7 @@ button:hover {
     div.producto-texto{
         max-width: 100%;
     }
-    
+
 }
 
 @media (max-width: 767px){

@@ -1,13 +1,12 @@
 .products {
-    border: 2px solid var(--secondary-color);
-    background-color: var(--secondary-color);
-    height: 500px;
+    background: linear-gradient(#441E1D, #A14744);
     max-height: 500px;
     display: flex;
     flex-direction: column;
     align-content: center;
     margin: 0 auto;
     transition: all 0.5s;
+    border-radius: 10px;
 }
 
 
@@ -17,7 +16,7 @@
 }
 
 .image-container {
-    
+
     height: 350px;
 }
 
@@ -26,10 +25,14 @@
     width: 100%;
     max-width: 100%;
     object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-h2,h3 {
+
+h2,h3,p {
     margin: 0;
+    color: bisque;
 }
 
 h2 {
@@ -73,7 +76,7 @@ button {
 
 @media (min-width: 768px) and (max-width: 1023){
     .products{
-        
+
     background-color: var(--primary-color);
     }
     .products {

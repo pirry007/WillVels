@@ -9,16 +9,38 @@ main {
     margin: 50px auto;
 }
 
-div.titulo{
-    max-width: 50%;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    margin: 0 auto;
+.presentation{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-div.titulo p {
-    margin: 20px;
+.slogan-text{
+  width: 50%;
+}
+
+.slogan-text h3{
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.slogan-text p{
+  font-size: 35px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.slogan-image{
+  width: 50%;
+}
+
+.slogan-image img{
+  width: 60%;
 }
 
 section.grid-container{

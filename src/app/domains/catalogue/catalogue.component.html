@@ -1,13 +1,18 @@
 <app-header />
 <main>
-  <div class="titulo">
-    <h1>Catalogo</h1>
-    <p>
-      Escoge la mejor escencia para tu hogar, explora entre increíbles figuras
-      para embellecer tu espacio o entre exquisitos aromas que te alegrarán el
-      rato
-    </p>
-  </div>
+  <section class="presentation">
+    <div class="slogan-text">
+      <h3><b>Nuestro Catálogo</b></h3>
+      <p>
+        Escoge como ambientar tu hogar y hacer que te sientas en tu lugar
+        favorito todos los días
+      </p>
+    </div>
+
+    <div class="slogan-image">
+      <img src="assets\images\LogoVels.png" alt="" />
+    </div>
+  </section>
   <section class="grid-container">
     @for (product of products(); track product.id) {
     <div>
@@ -20,7 +25,6 @@
           [routerLink]="['/product/' + product._id]"
         />
       </a>
-      <button class="add-cart" (click)="addToCart(product)">Agregar</button>
     </div>
     }
   </section>
