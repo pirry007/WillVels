@@ -6,15 +6,26 @@ import { Router } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CurrencyPipe } from '@angular/common';
 import { Product } from '../../models/product.model';
+import {ChangeDetectionStrategy} from '@angular/core';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-checkout',
   standalone: true,
-  imports: [HeaderComponent, CartProductsComponent, ReactiveFormsModule, CurrencyPipe],
+  imports: [HeaderComponent,
+            CartProductsComponent,
+            ReactiveFormsModule,
+            CurrencyPipe,
+            MatFormFieldModule,
+            MatInputModule,
+            FormsModule
+          ],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css'
 })
-export class CheckoutComponent {  
+export class CheckoutComponent {
   private CartService = inject(CartService);
   private Router = inject(Router);
 
@@ -35,8 +46,10 @@ export class CheckoutComponent {
     if(this.products().size >= 1 && this.paymentDetails.valid){
       this.CartService.createOrder(this.paymentDetails.value)
       .subscribe({
-        next: () => this.Router.navigate(["/thanks"]) 
+        next: () => this.Router.navigate([""])
       })
+    } else {
+      alert("No se puede completar la compra, revise los campos");
     }
   }
 }

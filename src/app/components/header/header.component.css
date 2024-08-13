@@ -45,7 +45,7 @@ nav a{
 
 
 #log-out{
-    color: white;
+    color: black;
 }
 
 nav a:hover{
@@ -156,14 +156,14 @@ aside .close:hover{
     background-color: rgb(117, 194, 117);
     transition: 0.4s ease;
     border: none;
-    color: white;
+    color: black;
     padding: 5px;
     border-radius: 5px;
   }
 
   .primary-button:hover {
     background-color: rgb(89, 156, 89);
-    color: rgb(255, 255, 255);
+    color: white;
   }
 
 .details{
@@ -229,7 +229,7 @@ aside .close:hover{
 
     aside.cart{
         width: 80vw;
-        
+
     }
 }
 

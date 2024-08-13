@@ -5,13 +5,13 @@ h2, label, input, h3, button {
 }
 
 main {
-    background-color: #fcf4f0;
+    background: radial-gradient(#E3ADA2, #CC5C6C);
     display: flex;
     flex-direction: row;
 }
 
 
-.payment { 
+.payment {
     padding: 25px;
     height: 100%;
     width: 55vw;
@@ -27,30 +27,16 @@ main {
     padding: 10px;
 }
 
-.formGroup input {
-    width: 30vw;
-    height: 35px;
-    border-radius: 20px;
-    border: solid #D8D4D3 1px;
-    background: transparent;
-}
-
-.formGroup label {
-    position: absolute;
-    top: 8%;
-    left: 15px;
-    transform: translateY(-50%);
-    color: #777777;
-    font-size: 16px;
-    pointer-events: none;
-    transition: .2s;
+.formGroup {
+  width: 35vw;
+  padding: 5px;
 }
 
 .cart {
     padding: 20px;
-    height: 120vh;
+    height: 155vh;
     width: 45vw;
-    background-color: #fcf4f0;
+    background: linear-gradient(#DAE2E4, #FCF4F0);
     gap: 20px;
     box-shadow: -7px 1px 10px -3px rgba(0,0,0,0.75);
     display: flex;
@@ -61,6 +47,8 @@ main {
 .payment-details button {
     background-color: #c6cebe;
     border-radius: 20px;
+    display: block;
+    padding: 5px;
 }
 
 @media(max-width: 767px) {
