@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
     box-sizing: border-box;
@@ -15,7 +17,8 @@ p, li, button, label {
     --secondary-color: #D8ABB7;
     --third-color: #FCF4F0;
     --fourth-color: #C6CEBE;
-    --font-family: font-family: "Montserrat", sans-serif;
+    --font-family: "Montserrat";
+    --font-family-title: "Montserrat Alternates", sans-serif;
 }
 
 body#body {
